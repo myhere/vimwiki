@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="style.css">
+<title>SearchAndReplace</title>
+<meta http-equiv="Content-Type" content="text/html; charset=cp936">
+</head>
+<body>
+
+<p>
+Vim Search and Replace Tricks
+</p>
+
+<p>
+:%s;搜索模式;替换模式;
+</p>
+
+<ul>
+<li>
+&amp; 在替换模式指 搜索模式匹配到全部字符
+
+<li>
+~ 在替换模式指 上次的替换模式
+
+<li>
+:s 等价于 :s;;~;    指 当前行重复上次替换(只替换一次)
+
+<li>
+:&amp;g 等价于 :s;;~;g  指 当前行重复上次替换
+
+<li>
+:%&amp;g 使用范围, 当前文件中重复上次替换
+
+<li>
+\u or \l 在替换模式中指 将后面第一个字符转为大写或小写
+
+<li>
+\U or \L 在替换模式中指 将后面直到替换模式结尾的或遇到 \e 或 \E 的所有字符转为大写或小写
+
+</ul>
+
+</body>
+</html>

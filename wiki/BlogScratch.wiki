@@ -1,0 +1,2 @@
+= scratch of blog =
+  * Vim SearchAndReplace

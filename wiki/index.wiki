@@ -1,0 +1,6 @@
+My Vimwiki
+
+= Contents =
+  * BlogScratch -- The scratch of my blog 'zhangl.in'
+
+
