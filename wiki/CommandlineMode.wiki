@@ -1,0 +1,40 @@
+Vim 的命令行模式
+
+快捷键
+
+* ctrl-b 命令行开头
+* ctrl-e 命令行结尾
+
+* ctrl-h 删除前一个字符
+* ctrl-w 删除前一个word
+* ctrl-u 删除光标之前所有字符
+
+* ctrl-r {0-9a-z"%#:-=.} 插入寄存器的内容
+
+* ctrl-r ctrl-f 插入当前光标下的文件名到命令行
+* ctrl-r ctrl-p 插入当前光标下的文件名(包含完整路径)到命令行
+* ctrl-r ctrl-w 插入当前光标下的word
+* ctrl-r ctrl-a 插入当前光标下的WORD
+
+* ctrl-h 相当于回车
+* ctrl-c 取消当前命令
+
+* ctrl-d 命令补全，列出所有命令
+* ctrl-n 命令补全，列出上一个命令
+* ctrl-p 命令补全，列出下一个命令
+* ctrl-a 命令不全，插入所有命令到命令行
+* ctrl-l 命令不全，只有一个则补全；若多个有公共则补全到公共部分，否则不补全
+
+
+因为 command-mode 下只有 ctrl-b 和 ctrl-e，可以增加移动的映射:
+cnoremap <m-f> <Right>
+cnoremap <m-b> <Left>
+
+
+有了这些快捷键在command-mode 就可放弃 backspace 和 enter 了(他们位置有些远)
+* ctrl-h 代替 backspace
+* ctrl-j 代替 enter
+
+
+
+

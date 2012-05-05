@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="style.css">
+<title>CommandlineMode</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+
+<p>
+Vim 的命令行模式
+</p>
+
+<p>
+快捷键
+</p>
+
+<ul>
+<li>
+ctrl-b 命令行开头
+
+<li>
+ctrl-e 命令行结尾
+
+</ul>
+
+<ul>
+<li>
+ctrl-h 删除前一个字符
+
+<li>
+ctrl-w 删除前一个word
+
+<li>
+ctrl-u 删除光标之前所有字符
+
+</ul>
+
+<ul>
+<li>
+ctrl-r {0-9a-z"%#:-=.} 插入寄存器的内容
+
+</ul>
+
+<ul>
+<li>
+ctrl-r ctrl-f 插入当前光标下的文件名到命令行
+
+<li>
+ctrl-r ctrl-p 插入当前光标下的文件名(包含完整路径)到命令行
+
+<li>
+ctrl-r ctrl-w 插入当前光标下的word
+
+<li>
+ctrl-r ctrl-a 插入当前光标下的WORD
+
+</ul>
+
+<ul>
+<li>
+ctrl-h 相当于回车
+
+<li>
+ctrl-c 取消当前命令
+
+</ul>
+
+<ul>
+<li>
+ctrl-d 命令补全，列出所有命令
+
+<li>
+ctrl-n 命令补全，列出上一个命令
+
+<li>
+ctrl-p 命令补全，列出下一个命令
+
+<li>
+ctrl-a 命令不全，插入所有命令到命令行
+
+<li>
+ctrl-l 命令不全，只有一个则补全；若多个有公共则补全到公共部分，否则不补全
+
+</ul>
+
+
+<p>
+因为 command-mode 下只有 ctrl-b 和 ctrl-e，可以增加移动的映射:
+cnoremap &lt;m-f&gt; &lt;Right&gt;
+cnoremap &lt;m-b&gt; &lt;Left&gt;
+</p>
+
+
+<p>
+有了这些快捷键在command-mode 就可放弃 backspace 和 enter 了(他们位置有些远)
+</p>
+<ul>
+<li>
+ctrl-h 代替 backspace
+
+<li>
+ctrl-j 代替 enter
+
+</ul>
+
+</body>
+</html>

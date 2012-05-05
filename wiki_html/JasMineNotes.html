@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="style.css">
+<title>Jasmine 学习笔记</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+
+
+<h2 id="toc_0.1">Suites and specs</h2>
+<ul>
+<li>
+Specs it()
+
+<li>
+Expectations expect()
+
+<li>
+Suits describe()
+
+<li>
+Disabling Tests&amp;Suites xit(), xdescribe()
+
+</ul>
+
+<h2 id="toc_0.2">Mathchers</h2>
+<ul>
+<li>
+expect(x).toEqual(y)
+
+<li>
+expect(x).toBe(y)
+
+<li>
+expect(x).toMatch(pattern)
+
+<li>
+expect(x).toDefined()
+
+<li>
+expect(x).toUndefined()
+
+<li>
+expect(x).toBeNull()
+
+<li>
+expect(x).toBeTruthy()
+
+<li>
+expect(x).toBeFalsy()
+
+<li>
+expect(x).toContain(y)
+
+<li>
+expect(x).toBeLessThan(y)
+
+<li>
+expect(x).toBeGreaterThan(y)
+
+<li>
+expect(function(){}).toThrow(e)
+
+</ul>
+
+<ul>
+<li>
+expect(x).not.toEqual(y)
+
+<li>
+...
+
+</ul>
+
+<ul>
+<li>
+add Matchers
+
+</ul>
+
+
+<h2 id="toc_0.3">Before&amp;After</h2>
+<ul>
+<li>
+beforeEach() before each spec it()
+
+<li>
+afterEach()
+
+</ul>
+
+<ul>
+<li>
+before every suit
+
+<li>
+after every suit
+
+<li>
+this.after() Single Spec After functions
+
+</ul>
+
+<h2 id="toc_0.4">Spies</h2>
+<ul>
+<li>
+spyOn()
+
+<li>
+jasmine.createSpy()
+
+</ul>
+
+<h2 id="toc_0.5">Asynchronous specs</h2>
+<ul>
+<li>
+runs(function) multiple runs() blocks in a spec will run serially
+
+<li>
+waits(timeout) waits() 函数只会 block runs() 的函数, 其他的不会 block
+
+<li>
+waitFor(function, optional message, optional timeout)
+
+</ul>
+
+</body>
+</html>

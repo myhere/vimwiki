@@ -1,6 +1,7 @@
 My Vimwiki
 
 = Contents =
-  * BlogScratch -- The scratch of my blog 'zhangl.in'
+  * VimNotes -- notes about vim
+  * JasMineNotes -- Notes about Jasmine
 
 

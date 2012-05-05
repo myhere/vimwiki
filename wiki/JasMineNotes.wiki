@@ -1,0 +1,44 @@
+%title Jasmine 学习笔记
+
+==Suites and specs==
+* Specs it()
+* Expectations expect()
+* Suits describe()
+* Disabling Tests&Suites xit(), xdescribe()
+
+==Mathchers==
+* expect(x).toEqual(y)
+* expect(x).toBe(y)
+* expect(x).toMatch(pattern)
+* expect(x).toDefined()
+* expect(x).toUndefined()
+* expect(x).toBeNull()
+* expect(x).toBeTruthy()
+* expect(x).toBeFalsy()
+* expect(x).toContain(y)
+* expect(x).toBeLessThan(y)
+* expect(x).toBeGreaterThan(y)
+* expect(function(){}).toThrow(e)
+
+* expect(x).not.toEqual(y)
+* ...
+
+* add Matchers
+
+
+==Before&After==
+* beforeEach() before each spec it()
+* afterEach()
+
+* before every suit
+* after every suit
+* this.after() Single Spec After functions
+
+==Spies==
+* spyOn()
+* jasmine.createSpy()
+
+==Asynchronous specs==
+* runs(function) multiple runs() blocks in a spec will run serially
+* waits(timeout) waits() 函数只会 block runs() 的函数, 其他的不会 block
+* waitFor(function, optional message, optional timeout)

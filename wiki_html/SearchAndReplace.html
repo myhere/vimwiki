@@ -3,7 +3,7 @@
 <head>
 <link rel="Stylesheet" type="text/css" href="style.css">
 <title>SearchAndReplace</title>
-<meta http-equiv="Content-Type" content="text/html; charset=cp936">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
 <body>
 
@@ -12,30 +12,30 @@ Vim Search and Replace Tricks
 </p>
 
 <p>
-:%s;����ģʽ;�滻ģʽ;
+:%s;搜索模式;替换模式;
 </p>
 
 <ul>
 <li>
-&amp; ���滻ģʽָ ����ģʽƥ�䵽ȫ���ַ�
+&amp; 在替换模式指 搜索模式匹配到全部字符
 
 <li>
-~ ���滻ģʽָ �ϴε��滻ģʽ
+~ 在替换模式指 上次的替换模式
 
 <li>
-:s �ȼ��� :s;;~;    ָ ��ǰ���ظ��ϴ��滻(ֻ�滻һ��)
+:s 等价于 :s;;~;    指 当前行重复上次替换(只替换一次)
 
 <li>
-:&amp;g �ȼ��� :s;;~;g  ָ ��ǰ���ظ��ϴ��滻
+:&amp;g 等价于 :s;;~;g  指 当前行重复上次替换
 
 <li>
-:%&amp;g ʹ�÷�Χ, ��ǰ�ļ����ظ��ϴ��滻
+:%&amp;g 使用范围, 当前文件中重复上次替换
 
 <li>
-\u or \l ���滻ģʽ��ָ �������һ���ַ�תΪ��д��Сд
+\u or \l 在替换模式中指 将后面第一个字符转为大写或小写
 
 <li>
-\U or \L ���滻ģʽ��ָ ������ֱ���滻ģʽ��β�Ļ����� \e �� \E �������ַ�תΪ��д��Сд
+\U or \L 在替换模式中指 将后面直到替换模式结尾的或遇到 \e 或 \E 的所有字符转为大写或小写
 
 </ul>
 
