@@ -32,5 +32,18 @@ google.setOnLoadCallback(function() {
   options.setSearchFormRoot('gse-form');
   options.setAutoComplete(true);
   customSearchControl.draw('gsc-result', options);
+
+  // 成功隐藏 content 和 disqus
+  customSearchControl.setSearchCompleteCallback(null, function() {
+    $('#content').hide();
+    $('#disqus_thread').hide()
+  });
+  // 清空搜索框
+  $('#gs_cb0').click(function() {
+    $('#content').show();
+    $('#disqus_thread').show()
+  });
+
+
 }, true);
 
