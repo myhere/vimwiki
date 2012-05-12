@@ -166,24 +166,13 @@ a.gsc-trailing-more-results:link {
   width:400px;
   margin-left:20px;
 }
-.article-lists{
-  padding:0 20px;
+
+.content{
+  font-family: Verdana, sans-serif;
+  font-size:14px;
 }
-.article-caption{
-  font-family:"Microsoft YaHei", "SimSun";
-}
-.article{
-  padding:10px 0 0;
-}
-.article-link,
-.article-link:hover{
+.content a{
   color: #15C;
-  font-size:16px;
-  text-decoration:underline;
-}
-.article-abstract{
-  margin-top:4px;
-  color:#333;
 }
 
 .footer{

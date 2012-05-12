@@ -1,4 +1,4 @@
-Vim Search and Replace Tricks
+%title Vim Search and Replace Tricks
 
 :%s;搜索模式;替换模式;
 

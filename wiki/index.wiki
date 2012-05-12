@@ -1,8 +1,9 @@
-My Vimwiki
+%title Myhere's vimwiki
+%template index
 
-= Contents =
+== 文章列表 ==
   * SearchAndReplace -- Vim
-  * LeftAndRightMotions -- vim
+  * LeftAndRightMotions -- Vim
   * CommandlineMode -- Vim
   * JasMineNotes -- Notes about Jasmine
 
