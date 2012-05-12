@@ -1,5 +1,4 @@
 %title Myhere's vimwiki
-%template index
 
 == 文章列表 ==
   * SearchAndReplace -- Vim
