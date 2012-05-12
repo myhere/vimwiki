@@ -1,4 +1,0 @@
-= scratch of blog =
-  * Vim SearchAndReplace
-  * Vim LeftAndRightMotions
-  * Vim CommandlineMode

@@ -1,7 +1,9 @@
 My Vimwiki
 
 = Contents =
-  * VimNotes -- notes about vim
+  * SearchAndReplace -- Vim
+  * LeftAndRightMotions -- vim
+  * CommandlineMode -- Vim
   * JasMineNotes -- Notes about Jasmine
 
 
