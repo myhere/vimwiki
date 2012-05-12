@@ -1,6 +1,7 @@
 <?php
-$base_dir = dirname(__FILE__);
+$base_dir = realpath(dirname(__FILE__) . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'wiki_html');
 $appcache_file = $base_dir . DIRECTORY_SEPARATOR . 'vimwiki.appcache';
+
 
 $lines = file($appcache_file);
 
