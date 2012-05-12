@@ -1,11 +1,11 @@
 CACHE MANIFEST
-# timestamp 2012-5-13 3:20:14 
+# @TIMESTAMP@  1111
 
 CACHE:
 ../assets/css/bootstrap.css
 ../assets/css/vimwiki.css
-
 ../assets/js/jquery.js
 ../assets/js/bootstrap-dropdown.js
 
-
+NETWORK:
+*
