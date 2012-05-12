@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="zh-CN" manifest="./vimwiki.appcache">
+<html lang="zh-CN" manifest="../wiki_html/vimwiki.appcache">
   <head>
     <meta charset="utf-8">
     <title>wiki template</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="学习笔记">
     <meta name="author" content="myhere.2009@gmail.com">
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
-    <link href="assets/css/vimwiki.css" rel="stylesheet">
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <link href="../assets/css/vimwiki.css" rel="stylesheet">
   </head>
 
   <body>
@@ -109,8 +109,8 @@
     </div>
 
 
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap-dropdown.js"></script>
 
 <!-- google analytics -->
 <script type="text/javascript">
@@ -156,5 +156,20 @@ var disqus_shortname = 'myheres-vimwiki'; // required: replace example with your
   }, true);
 </script>
 
+<script>
+// copied from: http://slides.html5rocks.com/#app-cache
+window.applicationCache.addEventListener('updateready', function(e) {
+  if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
+    window.applicationCache.swapCache();
+    if (confirm('A new version of this site is available. Load it?')) {
+      window.location.reload();
+    }
+  }
+}, false);
+</script>
+<!--
+TODO:
+ * module javascript
+-->
   </body>
 </html>
