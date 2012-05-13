@@ -18,7 +18,18 @@
             <a class="brand" href="index.html">Vimwiki</a>
             <div class="nav-collapse">
               <ul class="nav">
-                <li><a href="index.html">主页</a></li>
+                <li id="J_Index"><a href="index.html">主页</a></li>
+<script>
+(function() {
+var l = location.pathname;
+var r = /(index\.html|\/)$/;
+if (r.test(l)) {
+  var ele = document.getElementById('J_Index');
+  var old_cls = ele.className;
+  ele.className = old_cls + ' active';
+}
+})();
+</script>
                 <li><a href="http://zhangl.in" title="http://zhangl.in">博客</a></li>
               </ul>
               <div class="navbar-search pull-left gsc-form-wrapper" id="gse-form"></div>
