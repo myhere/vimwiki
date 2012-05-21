@@ -1,15 +1,15 @@
 
 
-==文件在 git 中有三种状态==
+=== 文件在 git 中有三种状态 ===
 * 已提交
 * 已修改
 * 已暂存
 
 
-==查看所有配置信息==
+=== 查看所有配置信息 ===
 * git config --list
 
-==.gitignore文件格式==
+=== .gitignore文件格式 ===
 * 空行和 # 开头的行被忽略
 * 可以使用标准 glob 模式匹配
   * glob 模式
@@ -20,15 +20,15 @@
 * 要忽略制定模式之外的文件或目录，在模式前加惊叹号 ! 取反
 
 
-==git diff==
+===git diff===
 * git diff 比较工作目录中当前文件和暂存区快照之间差异
 * git diff --cached 比较暂存起来的文件和上次提交的快照之间的差异
 
-==git rm==
+===git rm===
 * git rm 会删除文件
 * git rm --cached 从暂存区删除
 
-==git log==
+===git log===
 * -p 选项展开每次提交内容的差异
 * -2 显示最近两次的更新
 * --stat 显示简要的增删改行数统计
@@ -36,18 +36,18 @@
   * --pretty=online
   * --pretty=format:"%h - %an, %ar : %s"
 
-==git remote==
+===git remote===
 * 查看当前配置的远程仓库
 * git remote add [shortname] [url] 添加远程仓库
 * git remote rename 修改远程仓库的简短名称
 * git remote rm 
 
 
-==git push==
+===git push===
 * git push [remote-name] [branch-name]
 
 
-==git tag==
+===git tag===
 * git tag -l 轻量级 tag
 * git tag -a 含附注的 tag
 * git tag v1.2 9asfaf 后期补 tag
