@@ -2,7 +2,7 @@
 <html lang="zh-CN">
   <head>
     <meta charset="utf-8">
-    <title>Myhere's vimwiki</title>
+    <title>GitNotes1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="学习笔记">
     <meta name="author" content="myhere.2009@gmail.com">
@@ -58,28 +58,147 @@ if (r.test(l)) {
       <div class="content" id="content">
 
 
-<h2 id="toc_0.1">文章列表</h2>
+
+<p>
+==文件在 git 中有三种状态==
+</p>
 <ul>
 <li>
-<a href="SearchAndReplace.html">SearchAndReplace</a> -- Vim
+已提交
 
 <li>
-<a href="LeftAndRightMotions.html">LeftAndRightMotions</a> -- Vim
+已修改
 
 <li>
-<a href="CommandlineMode.html">CommandlineMode</a> -- Vim
+已暂存
+
+</ul>
+
+
+<p>
+==查看所有配置信息==
+</p>
+<ul>
+<li>
+git config --list
+
+</ul>
+
+<h2 id="toc_0.1">.gitignore文件格式</h2>
+<ul>
+<li>
+空行和 # 开头的行被忽略
 
 <li>
-<a href="JasMineNotes.html">JasMineNotes</a> -- Notes about Jasmine
+可以使用标准 glob 模式匹配
+
+<ul>
+<li>
+glob 模式
+
+<ul>
+<li>
+* 匹配 0 或多个任意字符
 
 <li>
-<a href="PHPDotDirectory.html">PHPDotDirectory</a> -- php 中 . 的路径
+[abc] 匹配任意一个在方括号中字符
 
 <li>
-<a href="GitNotesBasic.html">GitNotesBasic</a> -- git 基础知识
+? 只匹配一个任意字符
+
+</ul>
+</ul>
+<li>
+匹配模式最后是 / 说明要忽略的是目录
 
 <li>
-<a href="GitNotesBranch.html">GitNotesBranch</a> -- git 分支
+要忽略制定模式之外的文件或目录，在模式前加惊叹号 ! 取反
+
+</ul>
+
+
+<h2 id="toc_0.2">git diff</h2>
+<ul>
+<li>
+git diff 比较工作目录中当前文件和暂存区快照之间差异
+
+<li>
+git diff --cached 比较暂存起来的文件和上次提交的快照之间的差异
+
+</ul>
+
+<h2 id="toc_0.3">git rm</h2>
+<ul>
+<li>
+git rm 会删除文件
+
+<li>
+git rm --cached 从暂存区删除
+
+</ul>
+
+<h2 id="toc_0.4">git log</h2>
+<ul>
+<li>
+-p 选项展开每次提交内容的差异
+
+<li>
+-2 显示最近两次的更新
+
+<li>
+--stat 显示简要的增删改行数统计
+
+<li>
+--pretty 选项
+
+<ul>
+<li>
+--pretty=online
+
+<li>
+--pretty=format:"%h - %an, %ar : %s"
+
+</ul>
+</ul>
+
+<h2 id="toc_0.5">git remote</h2>
+<ul>
+<li>
+查看当前配置的远程仓库
+
+<li>
+git remote add [shortname] [url] 添加远程仓库
+
+<li>
+git remote rename 修改远程仓库的简短名称
+
+<li>
+git remote rm 
+
+</ul>
+
+
+<h2 id="toc_0.6">git push</h2>
+<ul>
+<li>
+git push [remote-name] [branch-name]
+
+</ul>
+
+
+<h2 id="toc_0.7">git tag</h2>
+<ul>
+<li>
+git tag -l 轻量级 tag
+
+<li>
+git tag -a 含附注的 tag
+
+<li>
+git tag v1.2 9asfaf 后期补 tag
+
+<li>
+git push origin [tagname] 推送 tag
 
 </ul>
 

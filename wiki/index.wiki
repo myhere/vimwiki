@@ -5,5 +5,8 @@
   * LeftAndRightMotions -- Vim
   * CommandlineMode -- Vim
   * JasMineNotes -- Notes about Jasmine
+  * PHPDotDirectory -- php 中 . 的路径
+  * GitNotesBasic -- git 基础知识
+  * GitNotesBranch -- git 分支
 
 

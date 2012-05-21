@@ -1,0 +1,39 @@
+"." 在 php 中指当前路径，这个“当前路径” 与 php 是怎样执行的有关
+
+
+假设 web 目录是这样的
+
+/path/to/web/
+|- index.php
+|- config
+   |- main.php
+
+index.php 中代码是这样的:
+<?php
+// index.php
+$base_dir = dirname(__FILE__);
+
+echo $base_dir, "\n";
+echo '"." in index.php is ', realpath('.'), "\n";
+require $base_dir . '/config/main.php';
+
+?>
+
+main.php 中代码是这样的:
+<?php
+// config/main.php
+echo '"." in main.php is ', realpath('.'), "\n";
+?>
+
+
+如果 index.php 是通过 web 访问执行的，则 realpath('.') 是这个文件所在的路径，
+不管 realpath('.') 是在 index.php 中还是 index.php require 的其他的文件中;
+
+如果 index.php 是 cli 下执行的，则 realpath('.') 是 current work direcotry
+也就是 php 执行所在的目录，与 index.php 文件所在目录无关
+
+
+php 的 include_path
+
+
+
