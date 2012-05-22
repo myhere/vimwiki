@@ -1,0 +1,43 @@
+%title git 分支
+
+ == git 分支 ==
+
+git 通过 HEAD 指针保存当前工作分支
+
+git 中分支，本质上是指向 commit 对象的可变指针。
+由于Git 中的分支实际上仅是一个包含所指对象校验和（40 个字符长度SHA-1 字串）
+的文件，所以创建和销毁一个分支就变得非常廉价。说白了，新建一个分支就是向一个文件
+写入41 个字节（外加一个换行符）
+
+=== 创建分支 ===
+{{{
+git branch bugfix-branch
+}}}
+
+
+=== 合并分支 ===
+{{{
+git checkout master
+git merge bugfix-branch
+}}}
+当在使用分支及合并的时候， 一切都是在自己的Git 仓库中进行的—— 完全不涉及与服务器的交互。
+
+
+=== 删除分支 ===
+{{{
+git branch -d bugfix-branch
+}}}
+
+
+=== 分支管理 ===
+* git branch 
+  * 列出所有分支
+  * 分支前有 * 的尾当前分支
+* git branch -v
+  *  查看各分支最后一次提交信息
+* git branch --merged
+  * 查看与当前分支合并过的分支
+  * 与当前分支已经合并的分支一般可以删除
+* git branch --no-merged
+  * 查看与当前分支没有合并的分支
+

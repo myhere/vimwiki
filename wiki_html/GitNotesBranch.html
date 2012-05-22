@@ -2,7 +2,7 @@
 <html lang="zh-CN">
   <head>
     <meta charset="utf-8">
-    <title>GitNotesBranch</title>
+    <title>git 分支</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="学习笔记">
     <meta name="author" content="myhere.2009@gmail.com">
@@ -57,6 +57,83 @@ if (r.test(l)) {
 
       <div class="content" id="content">
 
+
+<h2 id="toc_0.1" class="justcenter">git 分支</h2>
+
+<p>
+git 通过 HEAD 指针保存当前工作分支
+</p>
+
+<p>
+git 中分支，本质上是指向 commit 对象的可变指针。
+由于Git 中的分支实际上仅是一个包含所指对象校验和（40 个字符长度SHA-1 字串）
+的文件，所以创建和销毁一个分支就变得非常廉价。说白了，新建一个分支就是向一个文件
+写入41 个字节（外加一个换行符）
+</p>
+
+<h3 id="toc_0.1.1">创建分支</h3>
+<pre>
+git branch bugfix-branch
+</pre>
+
+
+<h3 id="toc_0.1.2">合并分支</h3>
+<pre>
+git checkout master
+git merge bugfix-branch
+</pre>
+<p>
+当在使用分支及合并的时候， 一切都是在自己的Git 仓库中进行的—— 完全不涉及与服务器的交互。
+</p>
+
+
+<h3 id="toc_0.1.3">删除分支</h3>
+<pre>
+git branch -d bugfix-branch
+</pre>
+
+
+<h3 id="toc_0.1.4">分支管理</h3>
+<ul>
+<li>
+git branch 
+
+<ul>
+<li>
+列出所有分支
+
+<li>
+分支前有 * 的尾当前分支
+
+</ul>
+<li>
+git branch -v
+
+<ul>
+<li>
+ 查看各分支最后一次提交信息
+
+</ul>
+<li>
+git branch --merged
+
+<ul>
+<li>
+查看与当前分支合并过的分支
+
+<li>
+与当前分支已经合并的分支一般可以删除
+
+</ul>
+<li>
+git branch --no-merged
+
+<ul>
+<li>
+查看与当前分支没有合并的分支
+
+</ul>
+</ul>
 
       </div>
 

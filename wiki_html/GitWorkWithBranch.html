@@ -2,7 +2,7 @@
 <html lang="zh-CN">
   <head>
     <meta charset="utf-8">
-    <title>Myhere's vimwiki</title>
+    <title>git分支工作流程</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="学习笔记">
     <meta name="author" content="myhere.2009@gmail.com">
@@ -58,33 +58,94 @@ if (r.test(l)) {
       <div class="content" id="content">
 
 
-<h2 id="toc_0.1">文章列表</h2>
-<ul>
-<li>
-<a href="SearchAndReplace.html">SearchAndReplace</a> -- Vim
+<h3 id="toc_0.0.1">长期分支</h3>
 
-<li>
-<a href="LeftAndRightMotions.html">LeftAndRightMotions</a> -- Vim
+<p>
+在 master 中保留完全稳定(或者说相对稳定)的代码，即已经发布或即将发布的代码。
+同时有个名为 develop 或 next 的平行分支，专门用于后续的开发，或仅用于稳定性测试，
+开发分支中的代码稳定后合并到 master 分支。
+</p>
 
-<li>
-<a href="CommandlineMode.html">CommandlineMode</a> -- Vim
+<p>
+长期分支可以用来维护不同程度的稳定性，某些大项目还会有个proposed（建议）或 pu（proposed updates，建议更新）分支，
+它包含着那些可能还没有成熟到进入next 或master 的内容。
+</p>
 
-<li>
-<a href="JasMineNotes.html">JasMineNotes</a> -- Notes about Jasmine
+<p>
+使用多个长期分支的做法并非必需，不过一般来说，对于特大型项目或特复杂的项目，这么做确实更容易管理。
+</p>
 
-<li>
-<a href="PHPDotDirectory.html">PHPDotDirectory</a> -- php 中 . 的路径
 
-<li>
-<a href="GitNotesBasic.html">GitNotesBasic</a> -- git 基础知识
+<h3 id="toc_0.0.2">特性分支 </h3>
 
-<li>
-<a href="GitNotesBranch.html">GitNotesBranch</a> -- git 分支
+<p>
+一个特性分支是指一个短期内，用于实现单一特性或与其相关工作的分支。
+</p>
 
-<li>
-<a href="GitWorkWithBranch.html">GitWorkWithBranch</a> -- git 分支工作流
 
-</ul>
+<h3 id="toc_0.0.3">远程分支</h3>
+
+<p>
+一次 clone 会建立自己的本地分支 master 和远程分支 origin/master，他们都指向 origin/master 分支的最后一次提交。
+</p>
+
+<p>
+git fetch origin 会从 origin 上获取本地仓库 master 分支中尚未有的数据，更新本地数据库，然后把 origin/master 的指针
+移动到他的最新位置
+</p>
+
+<h3 id="toc_0.0.4">推送本地分支到远程</h3>
+<p>
+将本地分支 local-branch 推送到 origin 服务器上，并命名为 server-branch
+</p>
+<pre>
+git push origin local-branch:server-branch
+</pre>
+
+<h3 id="toc_0.0.5">跟踪分支</h3>
+
+<p>
+从远程分支检出的本地分支，称为跟踪分支(tracking branch)。跟踪分支是一种和远程分支有直接联系的本地分支。 
+在克隆仓库时，Git 通常会自动创建一个master 分支来跟踪origin/master。
+</p>
+
+<h3 id="toc_0.0.6">删除远程分支</h3>
+
+<pre>
+git push [远程名] [本地分支]:[远程分支]
+git push origin :server-branch
+</pre>
+<p>
+本地分支为空，表示提取空白然后把它变成远程分支
+</p>
+
+<h3 id="toc_0.0.7">合并&amp;衍和</h3>
+<p>
+把一个分支整合到另一个分支有两种办法：merge(合并) &amp; rebase(衍和)
+</p>
+
+<p>
+merge 会把两个分支最新快照以及二者最新共同祖先进行三方合并。
+</p>
+
+<p>
+rebase 是把一个分支从共同祖先处开始到其最新快照的变化在另一个分支上打一遍。
+</p>
+<pre>
+git checkout experiment
+git rebase master
+</pre>
+
+<p>
+合并结果中最后一次提交所指向的快照，无论是通过一次衍合还是一次三方合并，
+都是同样的快照内容，只是提交的历史不同罢了。
+最后整合得到的结果没有任何区别，但衍合能产生一个更为整洁的提交历史。
+衍合按照每行改变发生的次序重演发 生的改变，而合并是把最终结果合在一起。
+</p>
+
+<p>
+*永远不要衍合那些已经推送到公共仓库的更新*
+</p>
 
       </div>
 
