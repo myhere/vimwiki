@@ -1,6 +1,0 @@
-# 使用 filter 在 commit 时修改文件内容
-#
-# git config filter.dater.clean 'perl -pe "s/\\\$Date[^\\\$]*\\\$/\\\$Date\\\$/"'
-# 
-
-/wiki_html/vimwiki.appcache filter=dater

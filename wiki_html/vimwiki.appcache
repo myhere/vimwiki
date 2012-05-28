@@ -1,6 +1,5 @@
 CACHE MANIFEST
 # @TIMESTAMP@ 1338225163.6428
-# $Date$
 
 CACHE:
 ../assets/css/bootstrap.css
@@ -10,4 +9,3 @@ CACHE:
 
 NETWORK:
 *
-
