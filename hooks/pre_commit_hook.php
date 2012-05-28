@@ -1,3 +1,4 @@
+#! /d/work/program/php-5.4.3/php
 <?php
 $base_dir = realpath(dirname(__FILE__) . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'wiki_html');
 $appcache_file = $base_dir . DIRECTORY_SEPARATOR . 'vimwiki.appcache';
@@ -21,3 +22,4 @@ foreach ($lines as $line) {
 
 file_put_contents($appcache_file, implode('', $results));
 
+?>
