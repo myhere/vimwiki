@@ -22,4 +22,5 @@ foreach ($lines as $line) {
 
 file_put_contents($appcache_file, implode('', $results));
 
+
 ?>
