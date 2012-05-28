@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <title>git 工具</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="学习笔记">
+    <meta name="author" content="myhere.2009@gmail.com">
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <link href="../assets/css/vimwiki.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <div class="navbar-inner">
+          <div class="container">
+            <a class="brand" href="index.html">Vimwiki</a>
+            <div class="nav-collapse">
+              <ul class="nav">
+                <li id="J_Index"><a href="index.html">主页</a></li>
+<script>
+(function() {
+var l = location.pathname;
+var r = /(index\.html|\/)$/;
+if (r.test(l)) {
+  var ele = document.getElementById('J_Index');
+  var old_cls = ele.className;
+  ele.className = old_cls + ' active';
+}
+})();
+</script>
+                <li><a href="http://zhangl.in" title="http://zhangl.in">博客</a></li>
+              </ul>
+              <div class="navbar-search pull-left gsc-form-wrapper" id="gse-form"></div>
+              <ul class="nav pull-right">
+                <li><a href="https://github.com/myhere/vimwiki" target="_blank">Hosting</a></li>
+                <li class="divider-vertical"></li>
+                <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Acknowledge <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="https://github.com/twitter/bootstrap" target="_blank">Bootstrap</a></li>
+                  <li><a href="http://pages.github.com/" target="_blank">Github Pages</a></li>
+                  <li><a href="http://code.google.com/p/vimwiki/" target="_blank">vimwiki</a></li>
+                  <li><a href="http://www.google.com/cse/" target="_blank">DISQUS</a></li>
+                  <li><a href="http://disqus.com/" target="_blank">Google Custom Search</a></li>
+                  <li class="divider"></li>
+                  <li><a href="http://jquery.com/" target="_blank">jQuery</a></li>
+                  <li><a href="http://www.vim.org/" target="_blank">Vim</a></li>
+                </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content" id="content">
+
+
+<h3 id="toc_0.0.1">引用日志</h3>
+<p>
+git 在后台会保存一份引用日志，记录最近几个月 HEAD 和分支引用的记录。
+</p>
+<pre>
+git reflog
+</pre>
+<p>
+引用日志只存在于本地，在新克隆的仓库里是引用日志是空的。
+</p>
+
+
+<h3 id="toc_0.0.2">祖先引用</h3>
+<p>
+在引用后加个 ^
+</p>
+<pre>
+# 查看 head 的父提交
+git show HEAD^
+# 查看 head 的第二父提交
+git show HEAD^2
+
+# 查看 head 的父提交
+git show HEAD~
+
+# 查看 head 的祖父提交
+git show HEAD~2
+
+# 查看 head 的祖父的第二父提交
+git show HEAD~3^2
+</pre>
+
+<h3 id="toc_0.0.3">提交范围</h3>
+<h4 id="toc_0.0.3.1">双点</h4>
+<pre>
+# 查看在 develop 分支中存在而不再 master 分支中的提交
+git log master..develop
+
+# 查看在当前分支而不再 orgin 上的提交
+git log origin/master..HEAD
+</pre>
+<h4 id="toc_0.0.3.2">多点</h4>
+<pre>
+# 所有从 refA 或 refB 中存在而不在 refC 中的提交
+git log refA refB ^refC
+</pre>
+<h4 id="toc_0.0.3.3">三点</h4>
+<pre>
+# 查看 master 或 develop 中包含但不是二者共有的提交
+git log master...develop
+</pre>
+
+
+<h3 id="toc_0.0.4">交互式暂存 </h3>
+<pre>
+# 可以暂存一个文件的部分修改
+git add -i
+</pre>
+
+<h3 id="toc_0.0.5">粗藏</h3>
+<pre>
+# 
+git stash 
+#
+git stash list
+#
+git stash apply
+
+# 从粗藏中创建分支
+git stash branch
+</pre>
+
+      </div>
+
+      <div id="gsc-result"></div>
+      <div id="disqus_thread"></div>
+      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+      <div class="footer">
+        <p>
+          <script>
+            document.write((new Date));
+          </script>
+        </p>
+        <p>Hello World!</p>
+      </div>
+    </div>
+
+
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap-dropdown.js"></script>
+    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+    <script src="../assets/js/vimwiki.js"></script>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+%title git 工具
+
+=== 引用日志 ===
+git 在后台会保存一份引用日志，记录最近几个月 HEAD 和分支引用的记录。
+{{{
+git reflog
+}}}
+引用日志只存在于本地，在新克隆的仓库里是引用日志是空的。
+
+
+=== 祖先引用 ===
+在引用后加个 ^
+{{{
+# 查看 head 的父提交
+git show HEAD^
+# 查看 head 的第二父提交
+git show HEAD^2
+
+# 查看 head 的父提交
+git show HEAD~
+
+# 查看 head 的祖父提交
+git show HEAD~2
+
+# 查看 head 的祖父的第二父提交
+git show HEAD~3^2
+}}}
+
+=== 提交范围 ===
+==== 双点 ====
+{{{
+# 查看在 develop 分支中存在而不再 master 分支中的提交
+git log master..develop
+
+# 查看在当前分支而不再 orgin 上的提交
+git log origin/master..HEAD
+}}}
+==== 多点 ====
+{{{
+# 所有从 refA 或 refB 中存在而不在 refC 中的提交
+git log refA refB ^refC
+}}}
+==== 三点 ====
+{{{
+# 查看 master 或 develop 中包含但不是二者共有的提交
+git log master...develop
+}}}
+
+
+=== 交互式暂存 ===
+{{{
+# 可以暂存一个文件的部分修改
+git add -i
+}}}
+
+=== 粗藏 ===
+{{{
+# 
+git stash 
+#
+git stash list
+#
+git stash apply
+
+# 从粗藏中创建分支
+git stash branch
+}}}
