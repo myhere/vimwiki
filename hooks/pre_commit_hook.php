@@ -8,7 +8,7 @@ $lines = file($appcache_file);
 $results = array();
 
 
-$pattern = '/(#\s*@TIMESTAMP@)\s*(\d+)/i';
+$pattern = '/^(?:\s*)(#\s*@TIMESTAMP@)(?:.*)$/';
 $replacement = '\\1 ' . microtime(true);
 
 foreach ($lines as $line) {
