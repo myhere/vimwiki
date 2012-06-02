@@ -2,7 +2,7 @@
 <html lang="zh-CN">
   <head>
     <meta charset="utf-8">
-    <title>Myhere's vimwiki</title>
+    <title>xpath - xml path language</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="学习笔记">
     <meta name="author" content="myhere.2009@gmail.com">
@@ -58,45 +58,151 @@ if (r.test(l)) {
       <div class="content" id="content">
 
 
-<h2 id="toc_0.1">文章列表</h2>
+<p>
+xpath 是在 xml 中查找信息的语言.
+</p>
+
+<h3 id="toc_0.0.1">节点</h3>
+<p>
+xpath 中有七种类型的节点:
+</p>
 <ul>
 <li>
-<a href="SearchAndReplace.html">SearchAndReplace</a> -- Vim
+元素
 
 <li>
-<a href="LeftAndRightMotions.html">LeftAndRightMotions</a> -- Vim
+属性
 
 <li>
-<a href="CommandlineMode.html">CommandlineMode</a> -- Vim
+文本
 
 <li>
-<a href="JasMineNotes.html">JasMineNotes</a> -- Notes about Jasmine
+命名空间
 
 <li>
-<a href="PHPDotDirectory.html">PHPDotDirectory</a> -- php 中 . 的路径
+处理指令
 
 <li>
-<a href="GitNotesBasic.html">GitNotesBasic</a> -- git 基础知识
+注释
 
 <li>
-<a href="GitNotesBranch.html">GitNotesBranch</a> -- git 分支
-
-<li>
-<a href="GitWorkWithBranch.html">GitWorkWithBranch</a> -- git 分支工作流
-
-<li>
-<a href="GitTools.html">GitTools</a> -- git 工具
-
-<li>
-<a href="xpath.html">xpath</a> -- xml path language
+文档(根)节点
 
 </ul>
 
 
-<h2 id="toc_0.2">TODO</h2>
+<h3 id="toc_0.0.2">路径表达式 </h3>
+
+<table>
+<tr>
+<th>
+表达式 
+</th>
+<th>
+描述
+</th>
+</tr>
+<tr>
+<td>
+nodename
+</td>
+<td>
+选择此节点的所有子节点
+</td>
+</tr>
+<tr>
+<td>
+/
+</td>
+<td>
+从根节点选取
+</td>
+</tr>
+<tr>
+<td>
+//
+</td>
+<td>
+从匹配选择的当前节点选择文档中的节点, 而不考虑他们位置
+</td>
+</tr>
+<tr>
+<td>
+.
+</td>
+<td>
+选择当前节点
+</td>
+</tr>
+<tr>
+<td>
+..
+</td>
+<td>
+选择当前节点的父节点
+</td>
+</tr>
+<tr>
+<td>
+@
+</td>
+<td>
+选择属性 
+</td>
+</tr>
+<tr>
+<td>
+*
+</td>
+<td>
+匹配任何元素节点
+</td>
+</tr>
+<tr>
+<td>
+@*
+</td>
+<td>
+匹配任何属性节点 
+</td>
+</tr>
+<tr>
+<td>
+node()
+</td>
+<td>
+匹配任何类型的节点 
+</td>
+</tr>
+</table>
+
 <ul>
-<li class="done0">
-google analytics
+<li>
+以 <strong>/</strong> 开头表示绝对路径
+
+</ul>
+
+<h3 id="toc_0.0.3">谓语</h3>
+<p>
+谓语用来查找某个特定的节点或者包含某个指定的值的节点.  总是包裹在 [] 之内
+</p>
+
+
+<h3 id="toc_0.0.4">选择多个路径</h3>
+<p>
+使用 | 分割多个 xpath
+</p>
+
+<h3 id="toc_0.0.5">例子</h3>
+<p>
+<a href="http_//www.w3school.com.cn/xpath/xpath_summary.asp.html">http://www.w3school.com.cn/xpath/xpath_summary.asp</a>
+</p>
+
+
+<h3 id="toc_0.0.6">参考 </h3>
+<ul>
+<li>
+<a href="http_//www.w3school.com.cn/xpath/xpath_syntax.asp.html">w3cschool</a>
 
 </ul>
 
