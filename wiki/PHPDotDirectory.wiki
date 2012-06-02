@@ -2,13 +2,15 @@
 
 
 假设 web 目录是这样的
-
+{{{
 /path/to/web/
 |- index.php
 |- config
    |- main.php
 
+}}}
 index.php 中代码是这样的:
+{{{
 <?php
 // index.php
 $base_dir = dirname(__FILE__);
@@ -18,12 +20,15 @@ echo '"." in index.php is ', realpath('.'), "\n";
 require $base_dir . '/config/main.php';
 
 ?>
+}}}
 
 main.php 中代码是这样的:
+{{{
 <?php
 // config/main.php
 echo '"." in main.php is ', realpath('.'), "\n";
 ?>
+}}}
 
 
 如果 index.php 是通过 web 访问执行的，则 realpath('.') 是这个文件所在的路径，

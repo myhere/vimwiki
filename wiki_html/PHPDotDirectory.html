@@ -65,38 +65,37 @@ if (r.test(l)) {
 <p>
 假设 web 目录是这样的
 </p>
-
-<p>
+<pre>
 /path/to/web/
 |- index.php
 |- config
    |- main.php
-</p>
 
+</pre>
 <p>
 index.php 中代码是这样的:
+</p>
+<pre>
 &lt;?php
 // index.php
-$base_dir = dirname(_<em>FILE</em>_);
-</p>
+$base_dir = dirname(__FILE__);
 
-<p>
 echo $base_dir, "\n";
 echo '"." in index.php is ', realpath('.'), "\n";
 require $base_dir . '/config/main.php';
-</p>
 
-<p>
 ?&gt;
-</p>
+</pre>
 
 <p>
 main.php 中代码是这样的:
+</p>
+<pre>
 &lt;?php
 // config/main.php
 echo '"." in main.php is ', realpath('.'), "\n";
 ?&gt;
-</p>
+</pre>
 
 
 <p>
