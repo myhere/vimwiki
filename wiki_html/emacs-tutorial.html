@@ -2,7 +2,7 @@
 <html lang="zh-CN">
   <head>
     <meta charset="utf-8">
-    <title>Myhere's vimwiki</title>
+    <title>emacs tutorial 笔记</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="学习笔记">
     <meta name="author" content="myhere.2009@gmail.com">
@@ -58,56 +58,141 @@ if (r.test(l)) {
       <div class="content" id="content">
 
 
-<h2 id="toc_0.1">文章列表</h2>
-<ul>
-<li>
-<a href="SearchAndReplace.html">SearchAndReplace</a> -- Vim
+<h2 id="toc_0.1">Meta 与 Control 区别</h2>
 
-<li>
-<a href="LeftAndRightMotions.html">LeftAndRightMotions</a> -- Vim
-
-<li>
-<a href="CommandlineMode.html">CommandlineMode</a> -- Vim
-
-<li>
-<a href="JasMineNotes.html">JasMineNotes</a> -- Notes about Jasmine
-
-<li>
-<a href="PHPDotDirectory.html">PHPDotDirectory</a> -- php 中 . 的路径
-
-<li>
-<a href="GitNotesBasic.html">GitNotesBasic</a> -- git 基础知识
-
-<li>
-<a href="GitNotesBranch.html">GitNotesBranch</a> -- git 分支
-
-<li>
-<a href="GitWorkWithBranch.html">GitWorkWithBranch</a> -- git 分支工作流
-
-<li>
-<a href="GitTools.html">GitTools</a> -- git 工具
-
-<li>
-<a href="xpath.html">xpath</a> -- xml path language
-
-<li>
-<a href="emacs-tutorial.html">emacs-tutorial</a> --  emacs tutorial 笔记
-
-<li>
-<a href="personal-project.html">personal-project</a>  -- 项目笔记
-
-</ul>
+<p>
+通常惯例是: Meta 系列组合键用来操作 "由语言定义的单位(比如词, 句子, 段落)", 而
+Control 系列组合键用来操作 "与语言无关的基本单位(如字符, 行等等)".
+</p>
 
 
-<h2 id="toc_0.2">TODO</h2>
-<ul>
-<li class="done0">
-google analytics
+<h2 id="toc_0.2" class="justcenter">移动命令</h2>
+<pre>
+C-f
+C-b
+M-f
+M-b
+C-n
+C-p
+C-a
+C-e
+M-a
+M-e
+C-v
+C-u C-v
+M-v
 
-<li class="done0">
-vim 插件管理 bundle 文章
+M-&lt;
+M-&gt;
+</pre>
 
-</ul>
+<h2 id="toc_0.3">前缀参数 C-u</h2>
+<pre>
+C-u 8 C-f
+</pre>
+
+
+<h2 id="toc_0.4">终止命令 C-g</h2>
+
+<h2 id="toc_0.5">窗口操作</h2>
+<pre>
+C-x 1
+</pre>
+
+<h2 id="toc_0.6">删除</h2>
+<pre>
+C-d
+M-d
+
+C-k
+M-k
+
+C-w
+</pre>
+
+<h2 id="toc_0.7">设置 Mark</h2>
+<pre>
+C-@
+</pre>
+
+<h2 id="toc_0.8">yank</h2>
+<pre>
+C-y
+M-y
+</pre>
+
+<h2 id="toc_0.9">撤销</h2>
+<pre>
+C-x u
+或
+C-_
+</pre>
+
+<h2 id="toc_0.10">文件</h2>
+<pre>
+C-x C-f
+C-x C-s
+
+C-x s
+</pre>
+
+<h2 id="toc_0.11">缓冲区 </h2>
+<pre>
+C-x C-b
+C-x b
+</pre>
+
+
+<h2 id="toc_0.12">命令集扩展 </h2>
+<pre>
+C-x  字符扩展. C-x 之后输入另一个字符或组合键
+M-x  命令名扩展
+</pre>
+
+<h2 id="toc_0.13">替换</h2>
+<pre>
+M-x replace-string
+</pre>
+
+<h2 id="toc_0.14">自动保存</h2>
+<pre>
+emacs 会定期自动保存正在编辑的文件, 文件名在头尾各加一个 # 字符.
+恢复自动保存的文件:
+M-x recover-file
+</pre>
+
+<h2 id="toc_0.15">模式</h2>
+<pre>
+只能应用一个主模式, 主模式都是可以用 M-x 启动的扩展命令
+
+C-h m 查看当前主模式的文档
+</pre>
+
+<h2 id="toc_0.16">搜索</h2>
+<pre>
+C-s 向前搜索
+C-s 下一个搜索, &lt;Backspace&gt; 上一个搜索
+C-r 向后搜索
+
+</pre>
+
+
+<h2 id="toc_0.17">多窗格 </h2>
+<pre>
+C-x o
+
+C-M-v   向上滚动另一个窗口
+C-M-S-v 向下滚动另一个窗口
+</pre>
+
+<h2 id="toc_0.18">查看帮助</h2>
+<pre>
+C-h
+C-h ?
+
+C-h c
+C-h k
+</pre>
 
       </div>
 

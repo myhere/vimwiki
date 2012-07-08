@@ -11,6 +11,8 @@
   * [[GitWorkWithBranch]] -- git 分支工作流
   * [[GitTools]] -- git 工具
   * [[xpath]] -- xml path language
+  * [[emacs-tutorial]] --  emacs tutorial 笔记
+  * [[personal-project]]  -- 项目笔记
 
 
 == TODO ==
