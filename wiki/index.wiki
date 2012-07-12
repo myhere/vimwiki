@@ -16,5 +16,5 @@
 
 
 == TODO ==
-* [ ] google analytics
-* [ ] vim 插件管理 bundle 文章
+* [ ] vim-nodejs-omnifunc
+* [ ] vim-nodejs-debugger
