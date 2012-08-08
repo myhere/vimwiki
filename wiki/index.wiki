@@ -13,6 +13,7 @@
   * [[xpath]] -- xml path language
   * [[emacs-tutorial]] --  emacs tutorial 笔记
   * [[personal-project]]  -- 项目笔记
+  * [[git-share]] -- git 分享
 
 
 == TODO ==
