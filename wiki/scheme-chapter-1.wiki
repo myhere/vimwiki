@@ -1,0 +1,23 @@
+%title Chapter 1, Toys
+
+= Chapter 1, Toys =
+
+== Laws ==
+
+=== Car ===
+The primitive `car` is defined only for non-empty lists.
+
+=== Cdr ===
+The primitive `cdr` is defined only for non-empty lists.
+The `cdr` of any non-empty list is always another list.
+
+=== Cons ===
+The primitive `cons` takes two arguments.
+The second argument to `cons` must be a list. The result is a list.
+
+=== Null? ===
+The primitive `null?` is defined only for list.
+
+=== Eq? ===
+The primitive `eq?` takes two arguments. Each must be non-numeric atom.
+
