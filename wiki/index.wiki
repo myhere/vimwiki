@@ -8,15 +8,16 @@
   * [[PHPDotDirectory]] -- php 中 . 的路径
   * [[GitNotesBasic]] -- git 基础知识
   * [[GitNotesBranch]] -- git 分支
-  * [[Git-reset]] -- git reset 命令
   * [[GitWorkWithBranch]] -- git 分支工作流
   * [[GitTools]] -- git 工具
   * [[xpath]] -- xml path language
   * [[emacs-tutorial]] --  emacs tutorial 笔记
   * [[personal-project]]  -- 项目笔记
-  * [[git-share]] -- git 分享
+  * [[frontend-dev-env]]  -- 前端开发环境
 
 
 == TODO ==
 * [ ] vim-nodejs-omnifunc
 * [ ] vim-nodejs-debugger
+* [ ] writing-modular-css
+  * http://renaissancenerd.net/post/7435876863/writing-modular-and-reusable-css
