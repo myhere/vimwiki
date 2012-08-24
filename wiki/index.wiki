@@ -1,4 +1,4 @@
-%title Myhere's vimwiki
+[[%title]] Myhere's vimwiki
 
 == 文章列表 ==
   * [[SearchAndReplace]] -- Vim
@@ -13,9 +13,12 @@
   * [[xpath]] -- xml path language
   * [[emacs-tutorial]] --  emacs tutorial 笔记
   * [[personal-project]]  -- 项目笔记
+  * [[frontend-dev-env]]  -- 前端开发环境
   * [[git-share]] -- git 分享
   * [[The-Little-Schemer]] -- <<The Little Schemer>> 学习笔记
 
 
 == TODO ==
 * [ ] vim-nodejs-debugger
+* [ ] writing-modular-css
+  * http://renaissancenerd.net/post/7435876863/writing-modular-and-reusable-css
