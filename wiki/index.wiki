@@ -22,4 +22,6 @@
 * [ ] vim-nodejs-omnifunc
 * [ ] vim-nodejs-debugger
 * [ ] writing-modular-css
+  * css 命名 + 效率
+  * oocss
   * http://renaissancenerd.net/post/7435876863/writing-modular-and-reusable-css
