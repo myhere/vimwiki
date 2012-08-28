@@ -2,7 +2,7 @@
 <html lang="zh-CN">
   <head>
     <meta charset="utf-8">
-    <title>index</title>
+    <title>css 模块化 </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="学习笔记">
     <meta name="author" content="myhere.2009@gmail.com">
@@ -57,67 +57,170 @@ if (r.test(l)) {
 
       <div class="content" id="content">
 
-<p>
-<a href="%title.html">%title</a> Myhere's vimwiki
-</p>
 
-<h2 id="toc_0.1">文章列表</h2>
+<h2 id="toc_0.1">问题</h2>
 <ul>
 <li>
-<a href="SearchAndReplace.html">SearchAndReplace</a> -- Vim
+独立性, 多人开发保证不相互干扰, 避免命名冲突
 
 <li>
-<a href="LeftAndRightMotions.html">LeftAndRightMotions</a> -- Vim
-
-<li>
-<a href="CommandlineMode.html">CommandlineMode</a> -- Vim
-
-<li>
-<a href="JasMineNotes.html">JasMineNotes</a> -- Notes about Jasmine
-
-<li>
-<a href="PHPDotDirectory.html">PHPDotDirectory</a> -- php 中 . 的路径
-
-<li>
-<a href="GitNotesBasic.html">GitNotesBasic</a> -- git 基础知识
-
-<li>
-<a href="GitNotesBranch.html">GitNotesBranch</a> -- git 分支
-
-<li>
-<a href="GitWorkWithBranch.html">GitWorkWithBranch</a> -- git 分支工作流
-
-<li>
-<a href="GitTools.html">GitTools</a> -- git 工具
-
-<li>
-<a href="xpath.html">xpath</a> -- xml path language
-
-<li>
-<a href="emacs-tutorial.html">emacs-tutorial</a> --  emacs tutorial 笔记
-
-<li>
-<a href="personal-project.html">personal-project</a>  -- 项目笔记
-
-<li>
-<a href="frontend-dev-env.html">frontend-dev-env</a>  -- 前端开发环境
-
-<li>
-<a href="git-share.html">git-share</a> -- git 分享
-
-<li>
-<a href="The-Little-Schemer.html">The-Little-Schemer</a> -- &lt;&lt;The Little Schemer&gt;&gt; 学习笔记
-
-<li>
-<a href="modular-css.html">modular-css</a> -- css 模块化
+复用性, 减少重复劳动
 
 </ul>
 
 
-<h2 id="toc_0.2">TODO</h2>
+<h2 id="toc_0.2">要求</h2>
 <ul>
-<li class="done0">
-vim-nodejs-debugger
+<li>
+命名清晰
+
+<li>
+保证 class 解析高效
+
+</ul>
+
+
+<h2 id="toc_0.3">已有方法</h2>
+
+<h3 id="toc_0.3.1">1. 模块名+子选择器 </h3>
+<p>
+.itembox {
+}
+.itembox .hd{
+}
+.itembox .bd{
+}
+.itembox .ft{
+}
+</p>
+
+<h4 id="toc_0.3.1.1">说明</h4>
+<ul>
+<li>
+有点 oocss 思想
+
+<li>
+缺点
+
+<ul>
+<li>
+子选择器在全局有定义时冲突
+
+<li>
+选择器容易过长(E F F2 F3 F4), 效率低
+
+<li>
+嵌套有顺序要求, class 声明顺序
+
+</ul>
+<li>
+优点
+
+<ul>
+<li>
+可扩展性好
+
+</ul>
+</ul>
+
+
+
+<h3 id="toc_0.3.2">2. 模块名加长 </h3>
+<p>
+.itembox {
+}
+.itembox-hd{
+}
+.itembox-bd{
+}
+.itembox-ft{
+}
+</p>
+
+
+<h4 id="toc_0.3.2.1">说明</h4>
+<ul>
+<li>
+优点
+
+<ul>
+<li>
+子选择器无命名冲突问题
+
+<li>
+选择器不会过长, 效率没问题
+
+<li>
+可以任意嵌套
+
+</ul>
+<li>
+缺点
+
+<ul>
+<li>
+选择器名字长, 增加文件体积
+
+<li>
+模块扩展麻烦, 没有子选择器(每个子元素都需要有多个class)
+
+</ul>
+</ul>
+
+
+
+<h3 id="toc_0.3.3">oocss</h3>
+<ul>
+<li>
+减少重复定义: 基础样式+扩展覆盖
+
+<li>
+make each object predictable and location indenpendent(保证复用)
+
+<li>
+use hacks sparingly and don't let them change your specificity
+
+<li>
+avoid styling ids, not reusable
+
+<li>
+avoid !important, except for leaf node
+
+<li>
+styling classes rather than elements
+
+<li>
+give rules the same strengh, use cascade order to overwrite previous rules(保证优先级可以覆盖)
+
+<li>
+<a href="http://www.slideshare.net/stubbornella/css-bloat">http://www.slideshare.net/stubbornella/css-bloat</a>
+
+<li>
+<a href="http://www.slideshare.net/stubbornella/object-oriented-css">http://www.slideshare.net/stubbornella/object-oriented-css</a>
+
+</ul>
+
+
+
+<h3 id="toc_0.3.4">css class 名称语义化 </h3>
+<ul>
+<li>
+<a href="http://css-tricks.com/semantic-class-names/">http://css-tricks.com/semantic-class-names/</a>
+
+</ul>
+
+
+
+<h3 id="toc_0.3.5">参考 </h3>
+<ul>
+<li>
+<a href="http://renaissancenerd.net/post/7435876863/writing-modular-and-reusable-css">http://renaissancenerd.net/post/7435876863/writing-modular-and-reusable-css</a>
+
+<li>
+css 渲染速度: <a href="https://developers.google.com/speed/docs/best-practices/rendering">https://developers.google.com/speed/docs/best-practices/rendering</a>
+
+<li>
+<a href="https://developer.mozilla.org/en-US/docs/CSS/Writing_Efficient_CSS?redirectlocale=en-US&amp;redirectslug=Writing_Efficient_CSS">https://developer.mozilla.org/en-US/docs/CSS/Writing_Efficient_CSS?redirectlocale=en-US&amp;redirectslug=Writing_Efficient_CSS</a>
 
 </ul>
 

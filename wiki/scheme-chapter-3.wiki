@@ -1,0 +1,53 @@
+%title Cons the Magnificant
+
+
+=== notes: ===
+* `rember`
+  * It takes an atom and a lat as its arguments, and makes a new lat with first occurence of the atom in the old lat removed.
+* Use `cons` to build lists
+* `firsts`
+  * The function `firsts` takes one arguments, a list, which is a null list or containes only non-empty lists. It builds another list composed of the first S-expression of each internal list
+* When building a list, describe the first typical element, and then `cons` it onto the natural recursion.
+* `insertR`
+  * `(insertR new old lat)`
+  * It takew three arguments: the atoms `new` and `old`, and a lat. The function `insertR` builds a lat with `new` inserted to the right of the first occurence of `old`
+
+
+
+{{{
+(define rember
+  (lambda (a lat) 
+    (cond 
+      ((null? lat) (quote ()))
+      (else 
+        (cond 
+          ((eq? a (car lat)) (cdr a lat)
+          (else (cons (car lat) 
+                      (rember a 
+                              (cdr a lat))))))))))
+}}}
+
+
+{{{
+(define firsts
+  (lambda l 
+    (cond 
+      ((null? l) (quote()))
+      (else (cons (car (car l))
+                  (firsts (cdr l)))))))
+}}}
+
+
+{{{
+(define insertL
+  (lambda (new old lat)
+    (cond 
+      ((null? lat) (quote ()))
+      (else 
+        (cond
+          ((eq? (car lat) old) (cons new lat))
+          (else (cons (car lat) 
+                      (insertL new old (cdr lat))))))))
+}}}
+
+page57
