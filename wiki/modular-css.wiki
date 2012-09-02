@@ -56,7 +56,7 @@
 
 * 对于模块的名称, 统一采用 `.m-` 开头, 子选择器不允许通过 `.m-` 开头
 * 模块子选择器定义不能超过 3 层(如: `.m-itemlist .bd .left .img img` 不允许), [[https://developers.google.com/speed/docs/best-practices/rendering|css 选择器效率 ]]
-* 不要限定 class 的元素(如`.m-itemlist ul.list`)
+* 不要限定 class 的元素(如 `.m-itemlist ul.list`)
 * 不要使用 `!important`
 * 不要使用 id 给元素设定样式
 * 对模块的同一个元素, 使他们的选择器有相同的优先级, 保证覆盖的一致性

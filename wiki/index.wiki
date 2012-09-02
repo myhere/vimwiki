@@ -1,4 +1,4 @@
-[[%title]] Myhere's vimwiki
+%title Myhere's vimwiki
 
 == 文章列表 ==
   * [[SearchAndReplace]] -- Vim
