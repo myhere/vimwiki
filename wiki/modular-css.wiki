@@ -1,18 +1,14 @@
 %title css 模块化 
 
-== 问题 ==
-* 独立性, 多人开发保证不相互干扰, 避免命名冲突
-* 复用性, 减少重复劳动
-
-
-== 要求 ==
-* 命名清晰
-* 保证 class 解析高效
+== css 模块化好处 ==
+# 复用性; 可复用性好
+# 可维护性好; 一个模块的代码不会很多, 这样修改的成本就不会很大
 
 
 == 已有方法 ==
 
 === 1. 模块名+子选择器 === 
+{{{
 .itembox {
 }
 .itembox .hd{
@@ -21,19 +17,19 @@
 }
 .itembox .ft{
 }
+}}}
 
 ==== 说明 ====
-* 有点 oocss 思想
-* 缺点
-  * 子选择器在全局有定义时冲突
-  * 选择器容易过长(E F F2 F3 F4), 效率低
-  * 嵌套有顺序要求, class 声明顺序
 * 优点
-  * 可扩展性好
+  * 可扩展性好, 组合 class 名实现模块扩展
+* 缺点
+  * 选择器容易过长(`E F F2 F3 F4`)
+  * 嵌套有顺序要求, `class` 声明顺序
 
 
 
 === 2. 模块名加长 ===
+{{{
 .itembox {
 }
 .itembox-hd{
@@ -42,12 +38,12 @@
 }
 .itembox-ft{
 }
+}}}
 
 
 ==== 说明 ====
 * 优点
   * 子选择器无命名冲突问题
-  * 选择器不会过长, 效率没问题
   * 可以任意嵌套
 * 缺点
   * 选择器名字长, 增加文件体积
@@ -55,25 +51,26 @@
 
 
 
-=== oocss ===
-* 减少重复定义: 基础样式+扩展覆盖
-* make each object predictable and location indenpendent(保证复用)
-* use hacks sparingly and don't let them change your specificity
-* avoid styling ids, not reusable
-* avoid !important, except for leaf node
-* styling classes rather than elements
-* give rules the same strengh, use cascade order to overwrite previous rules(保证优先级可以覆盖)
-* http://www.slideshare.net/stubbornella/css-bloat
-* http://www.slideshare.net/stubbornella/object-oriented-css
+== 模块化 css 方案 ==
+采用第一种方法, 对于他的一些缺点, 可以通过一些规范来避免
+
+* 对于模块的名称, 统一采用 `.m-` 开头, 子选择器不允许通过 `.m-` 开头
+* 模块子选择器定义不能超过 3 层(如: `.m-itemlist .bd .left .img img` 不允许), [[https://developers.google.com/speed/docs/best-practices/rendering|css 选择器效率 ]]
+* 不要限定 class 的元素(如`.m-itemlist ul.list`)
+* 不要使用 `!important`
+* 不要使用 id 给元素设定样式
+* 对模块的同一个元素, 使他们的选择器有相同的优先级, 保证覆盖的一致性
 
 
 
-=== css class 名称语义化 ===
+==== 参考 ====
+* oocss
+  * http://www.slideshare.net/stubbornella/css-bloat
+  * http://www.slideshare.net/stubbornella/object-oriented-css
+  * http://www.vanseodesign.com/css/object-oriented-css/
+* 高效的 css 选择器
+  * https://developers.google.com/speed/docs/best-practices/rendering
+  * https://developer.mozilla.org/en-US/docs/CSS/Writing_Efficient_CSS?redirectlocale=en-US&redirectslug=Writing_Efficient_CSS
 * http://css-tricks.com/semantic-class-names/
+* http://shawphy.com/2009/08/object-oriented-css.html
 
-
-
-=== 参考 ===
-* http://renaissancenerd.net/post/7435876863/writing-modular-and-reusable-css
-* css 渲染速度: https://developers.google.com/speed/docs/best-practices/rendering
-* https://developer.mozilla.org/en-US/docs/CSS/Writing_Efficient_CSS?redirectlocale=en-US&redirectslug=Writing_Efficient_CSS

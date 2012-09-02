@@ -58,32 +58,21 @@ if (r.test(l)) {
       <div class="content" id="content">
 
 
-<h2 id="toc_0.1">问题</h2>
-<ul>
+<h2 id="toc_0.1">css 模块化好处 </h2>
+<ol>
 <li>
-独立性, 多人开发保证不相互干扰, 避免命名冲突
-
-<li>
-复用性, 减少重复劳动
-
-</ul>
-
-
-<h2 id="toc_0.2">要求</h2>
-<ul>
-<li>
-命名清晰
+复用性; 可复用性好
 
 <li>
-保证 class 解析高效
+可维护性好; 一个模块的代码不会很多, 这样修改的成本就不会很大
 
-</ul>
+</ol>
 
 
-<h2 id="toc_0.3">已有方法</h2>
+<h2 id="toc_0.2">已有方法</h2>
 
-<h3 id="toc_0.3.1">1. 模块名+子选择器 </h3>
-<p>
+<h3 id="toc_0.2.1">1. 模块名+子选择器 </h3>
+<pre>
 .itembox {
 }
 .itembox .hd{
@@ -92,41 +81,35 @@ if (r.test(l)) {
 }
 .itembox .ft{
 }
-</p>
+</pre>
 
-<h4 id="toc_0.3.1.1">说明</h4>
+<h4 id="toc_0.2.1.1">说明</h4>
 <ul>
-<li>
-有点 oocss 思想
-
-<li>
-缺点
-
-<ul>
-<li>
-子选择器在全局有定义时冲突
-
-<li>
-选择器容易过长(E F F2 F3 F4), 效率低
-
-<li>
-嵌套有顺序要求, class 声明顺序
-
-</ul>
 <li>
 优点
 
 <ul>
 <li>
-可扩展性好
+可扩展性好, 组合 class 名实现模块扩展
+
+</ul>
+<li>
+缺点
+
+<ul>
+<li>
+选择器容易过长(<code>E F F2 F3 F4</code>)
+
+<li>
+嵌套有顺序要求, <code>class</code> 声明顺序
 
 </ul>
 </ul>
 
 
 
-<h3 id="toc_0.3.2">2. 模块名加长 </h3>
-<p>
+<h3 id="toc_0.2.2">2. 模块名加长 </h3>
+<pre>
 .itembox {
 }
 .itembox-hd{
@@ -135,10 +118,10 @@ if (r.test(l)) {
 }
 .itembox-ft{
 }
-</p>
+</pre>
 
 
-<h4 id="toc_0.3.2.1">说明</h4>
+<h4 id="toc_0.2.2.1">说明</h4>
 <ul>
 <li>
 优点
@@ -146,9 +129,6 @@ if (r.test(l)) {
 <ul>
 <li>
 子选择器无命名冲突问题
-
-<li>
-选择器不会过长, 效率没问题
 
 <li>
 可以任意嵌套
@@ -169,58 +149,66 @@ if (r.test(l)) {
 
 
 
-<h3 id="toc_0.3.3">oocss</h3>
+<h2 id="toc_0.3">模块化 css 方案</h2>
+<p>
+采用第一种方法, 对于他的一些缺点, 可以通过一些规范来避免
+</p>
+
 <ul>
 <li>
-减少重复定义: 基础样式+扩展覆盖
+对于模块的名称, 统一采用 <code>.m-</code> 开头, 子选择器不允许通过 <code>.m-</code> 开头
 
 <li>
-make each object predictable and location indenpendent(保证复用)
+模块子选择器定义不能超过 3 层(如: <code>.m-itemlist .bd .left .img img</code> 不允许), <a href="https://developers.google.com/speed/docs/best-practices/rendering">css 选择器效率 </a>
 
 <li>
-use hacks sparingly and don't let them change your specificity
+不要限定 class 的元素(如`.m-itemlist ul.list`)
 
 <li>
-avoid styling ids, not reusable
+不要使用 <code>!important</code>
 
 <li>
-avoid !important, except for leaf node
+不要使用 id 给元素设定样式
 
 <li>
-styling classes rather than elements
+对模块的同一个元素, 使他们的选择器有相同的优先级, 保证覆盖的一致性
 
+</ul>
+
+
+
+<h4 id="toc_0.3.0.1">参考 </h4>
+<ul>
 <li>
-give rules the same strengh, use cascade order to overwrite previous rules(保证优先级可以覆盖)
+oocss
 
+<ul>
 <li>
 <a href="http://www.slideshare.net/stubbornella/css-bloat">http://www.slideshare.net/stubbornella/css-bloat</a>
 
 <li>
 <a href="http://www.slideshare.net/stubbornella/object-oriented-css">http://www.slideshare.net/stubbornella/object-oriented-css</a>
 
-</ul>
-
-
-
-<h3 id="toc_0.3.4">css class 名称语义化 </h3>
-<ul>
 <li>
-<a href="http://css-tricks.com/semantic-class-names/">http://css-tricks.com/semantic-class-names/</a>
+<a href="http://www.vanseodesign.com/css/object-oriented-css/">http://www.vanseodesign.com/css/object-oriented-css/</a>
 
 </ul>
+<li>
+高效的 css 选择器
 
-
-
-<h3 id="toc_0.3.5">参考 </h3>
 <ul>
 <li>
-<a href="http://renaissancenerd.net/post/7435876863/writing-modular-and-reusable-css">http://renaissancenerd.net/post/7435876863/writing-modular-and-reusable-css</a>
-
-<li>
-css 渲染速度: <a href="https://developers.google.com/speed/docs/best-practices/rendering">https://developers.google.com/speed/docs/best-practices/rendering</a>
+<a href="https://developers.google.com/speed/docs/best-practices/rendering">https://developers.google.com/speed/docs/best-practices/rendering</a>
 
 <li>
 <a href="https://developer.mozilla.org/en-US/docs/CSS/Writing_Efficient_CSS?redirectlocale=en-US&amp;redirectslug=Writing_Efficient_CSS">https://developer.mozilla.org/en-US/docs/CSS/Writing_Efficient_CSS?redirectlocale=en-US&amp;redirectslug=Writing_Efficient_CSS</a>
+
+</ul>
+<li>
+<a href="http://css-tricks.com/semantic-class-names/">http://css-tricks.com/semantic-class-names/</a>
+
+<li>
+<a href="http://shawphy.com/2009/08/object-oriented-css.html">http://shawphy.com/2009/08/object-oriented-css.html</a>
 
 </ul>
 
