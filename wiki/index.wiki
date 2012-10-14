@@ -17,7 +17,9 @@
   * [[git-share]] -- git 分享
   * [[The-Little-Schemer]] -- <<The Little Schemer>> 学习笔记
   * [[modular-css]] -- css 模块化
+  * [[css-style-guide]] -- css 风格规范
 
 
 == TODO ==
 * [ ] vim-nodejs-debugger
+* [ ] gnu emacs pocket reference:p24
