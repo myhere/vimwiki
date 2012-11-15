@@ -24,3 +24,4 @@
 == TODO ==
 * [ ] vim-nodejs-debugger
 * [ ] gnu emacs pocket reference:p24
+* [ ] chrome-dev-tool profile&performance
