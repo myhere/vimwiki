@@ -13,15 +13,13 @@
   * [[xpath]] -- xml path language
   * [[emacs-tutorial]] --  emacs tutorial 笔记
   * [[personal-project]]  -- 项目笔记
-  * [[frontend-dev-env]]  -- 前端开发环境
   * [[git-share]] -- git 分享
   * [[The-Little-Schemer]] -- <<The Little Schemer>> 学习笔记
   * [[modular-css]] -- css 模块化
   * [[css-style-guide]] -- css 风格规范
-  * [[resume]] -- 简历
+  * [[css-animation]] -- css 动画
 
 
 == TODO ==
-* [ ] vim-nodejs-debugger
-* [ ] gnu emacs pocket reference:p24
 * [ ] chrome-dev-tool profile&performance
+* [ ] media query

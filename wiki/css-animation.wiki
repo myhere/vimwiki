@@ -1,0 +1,74 @@
+%title css 动画笔记
+
+=== 相关属性 ===
+
+css 动画相关的属性有 [[https://developer.mozilla.org/en-US/docs/CSS/Tutorials/Using_CSS_transitions|transition]] 和 [[https://developer.mozilla.org/en-US/docs/CSS/Tutorials/Using_CSS_animations|animation]], 一般用这两个属性配合其他属性实现动画效果.
+
+=== transition ===
+
+[[https://developer.mozilla.org/en-US/docs/CSS/transition|transition]] 是转变, 将指定的 css 属性从一个值转变为另一个值. 
+
+他的子属性:
+* `transition-property`
+* `transition-duration`
+* `transition-timing-function`
+* `transition-delay`.
+
+可以监听元素的 `transitioned` 事件来获取 transition 结束状态. 监听方式同 dom
+元素的其他事件一样.
+
+=== animation ===
+
+[[https://developer.mozilla.org/en-US/docs/CSS/animation|animation]] 是动画, 配合 [[https://developer.mozilla.org/en-US/docs/CSS/@keyframes|keyframe]] 来指定动画.
+
+他的子属性: 
+* `animation-delay`
+* `animation-direction`
+* `animation-duration`,
+* `animation-iteration-count`
+* `animation-name`
+* `animation-play-state`
+* `animation-timing-function`
+* `animation-fill-mode`
+
+animation 的几个事件:
+* animationstart
+* animationend
+* animationiteration
+
+
+=== transform 属性 ===
+
+[[https://developer.mozilla.org/en-US/docs/CSS/transform|transform]] 是变形, css3 的一个重要属性, 他常和 transition 和 animation 一起来实现一些动画.
+
+transform 有 2d 和 3d 两种:
+* `matrix`
+* `translate` 偏移
+* `translateX`
+* `translateY`
+* `scale`  缩放
+* `scaleX`
+* `scaleY`
+* `rotate` 旋转
+* `skewX`
+* `skewY`
+* `matrix3d`
+* `translate3d`
+* `translateZ`
+* `scale3d`
+* `scaleZ`
+* `rotate3d`
+* `rotateX`
+* `rotateY`
+* `rotateZ`
+* `perspective`
+
+
+
+== TODO ==
+* [ ] transition-timing-function: `cubic-bezier`
+* [ ] transform `matrix`
+
+
+=== 参考 ===
+* [[http://www.w3schools.com/cssref/default.asp|css reference]]

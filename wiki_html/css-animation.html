@@ -2,7 +2,7 @@
 <html lang="zh-CN">
   <head>
     <meta charset="utf-8">
-    <title>Myhere's vimwiki</title>
+    <title>css 动画笔记</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="学习笔记">
     <meta name="author" content="myhere.2009@gmail.com">
@@ -58,69 +58,182 @@ if (r.test(l)) {
       <div class="content" id="content">
 
 
-<h2 id="toc_0.1">文章列表</h2>
+<h3 id="toc_0.0.1">相关属性 </h3>
+
+<p>
+css 动画相关的属性有 <a href="https://developer.mozilla.org/en-US/docs/CSS/Tutorials/Using_CSS_transitions">transition</a> 和 <a href="https://developer.mozilla.org/en-US/docs/CSS/Tutorials/Using_CSS_animations">animation</a>, 一般用这两个属性配合其他属性实现动画效果.
+</p>
+
+<h3 id="toc_0.0.2">transition</h3>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/CSS/transition">transition</a> 是转变, 将指定的 css 属性从一个值转变为另一个值. 
+</p>
+
+<p>
+他的子属性:
+</p>
 <ul>
 <li>
-<a href="SearchAndReplace.html">SearchAndReplace</a> -- Vim
+<code>transition-property</code>
 
 <li>
-<a href="LeftAndRightMotions.html">LeftAndRightMotions</a> -- Vim
+<code>transition-duration</code>
 
 <li>
-<a href="CommandlineMode.html">CommandlineMode</a> -- Vim
+<code>transition-timing-function</code>
 
 <li>
-<a href="JasMineNotes.html">JasMineNotes</a> -- Notes about Jasmine
+<code>transition-delay</code>.
+
+</ul>
+
+<p>
+可以监听元素的 <code>transitioned</code> 事件来获取 transition 结束状态. 监听方式同 dom
+元素的其他事件一样.
+</p>
+
+<h3 id="toc_0.0.3">animation</h3>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/CSS/animation">animation</a> 是动画, 配合 <a href="https://developer.mozilla.org/en-US/docs/CSS/@keyframes">keyframe</a> 来指定动画.
+</p>
+
+<p>
+他的子属性: 
+</p>
+<ul>
+<li>
+<code>animation-delay</code>
 
 <li>
-<a href="PHPDotDirectory.html">PHPDotDirectory</a> -- php 中 . 的路径
+<code>animation-direction</code>
 
 <li>
-<a href="GitNotesBasic.html">GitNotesBasic</a> -- git 基础知识
+<code>animation-duration</code>,
 
 <li>
-<a href="GitNotesBranch.html">GitNotesBranch</a> -- git 分支
+<code>animation-iteration-count</code>
 
 <li>
-<a href="GitWorkWithBranch.html">GitWorkWithBranch</a> -- git 分支工作流
+<code>animation-name</code>
 
 <li>
-<a href="GitTools.html">GitTools</a> -- git 工具
+<code>animation-play-state</code>
 
 <li>
-<a href="xpath.html">xpath</a> -- xml path language
+<code>animation-timing-function</code>
 
 <li>
-<a href="emacs-tutorial.html">emacs-tutorial</a> --  emacs tutorial 笔记
+<code>animation-fill-mode</code>
+
+</ul>
+
+<p>
+animation 的几个事件:
+</p>
+<ul>
+<li>
+animationstart
 
 <li>
-<a href="personal-project.html">personal-project</a>  -- 项目笔记
+animationend
 
 <li>
-<a href="git-share.html">git-share</a> -- git 分享
-
-<li>
-<a href="The-Little-Schemer.html">The-Little-Schemer</a> -- &lt;&lt;The Little Schemer&gt;&gt; 学习笔记
-
-<li>
-<a href="modular-css.html">modular-css</a> -- css 模块化
-
-<li>
-<a href="css-style-guide.html">css-style-guide</a> -- css 风格规范
-
-<li>
-<a href="css-animation.html">css-animation</a> -- css 动画
+animationiteration
 
 </ul>
 
 
-<h2 id="toc_0.2">TODO</h2>
+<h3 id="toc_0.0.4">transform 属性 </h3>
+
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/CSS/transform">transform</a> 是变形, css3 的一个重要属性, 他常和 transition 和 animation 一起来实现一些动画.
+</p>
+
+<p>
+transform 有 2d 和 3d 两种:
+</p>
+<ul>
+<li>
+<code>matrix</code>
+
+<li>
+<code>translate</code> 偏移
+
+<li>
+<code>translateX</code>
+
+<li>
+<code>translateY</code>
+
+<li>
+<code>scale</code>  缩放
+
+<li>
+<code>scaleX</code>
+
+<li>
+<code>scaleY</code>
+
+<li>
+<code>rotate</code> 旋转
+
+<li>
+<code>skewX</code>
+
+<li>
+<code>skewY</code>
+
+<li>
+<code>matrix3d</code>
+
+<li>
+<code>translate3d</code>
+
+<li>
+<code>translateZ</code>
+
+<li>
+<code>scale3d</code>
+
+<li>
+<code>scaleZ</code>
+
+<li>
+<code>rotate3d</code>
+
+<li>
+<code>rotateX</code>
+
+<li>
+<code>rotateY</code>
+
+<li>
+<code>rotateZ</code>
+
+<li>
+<code>perspective</code>
+
+</ul>
+
+
+
+<h2 id="toc_0.1">TODO</h2>
 <ul>
 <li class="done0">
-chrome-dev-tool profile&amp;performance
+transition-timing-function: <code>cubic-bezier</code>
 
 <li class="done0">
-media query
+transform <code>matrix</code>
+
+</ul>
+
+
+<h3 id="toc_0.1.1">参考 </h3>
+<ul>
+<li>
+<a href="http://www.w3schools.com/cssref/default.asp">css reference</a>
 
 </ul>
 
