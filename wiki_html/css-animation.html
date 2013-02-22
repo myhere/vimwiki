@@ -64,6 +64,7 @@ if (r.test(l)) {
 css 动画相关的属性有 <a href="https://developer.mozilla.org/en-US/docs/CSS/Tutorials/Using_CSS_transitions">transition</a> 和 <a href="https://developer.mozilla.org/en-US/docs/CSS/Tutorials/Using_CSS_animations">animation</a>, 一般用这两个属性配合其他属性实现动画效果.
 </p>
 
+
 <h3 id="toc_0.0.2">transition</h3>
 
 <p>
@@ -92,6 +93,7 @@ css 动画相关的属性有 <a href="https://developer.mozilla.org/en-US/docs/C
 可以监听元素的 <code>transitioned</code> 事件来获取 transition 结束状态. 监听方式同 dom
 元素的其他事件一样.
 </p>
+
 
 <h3 id="toc_0.0.3">animation</h3>
 
@@ -134,13 +136,13 @@ animation 的几个事件:
 </p>
 <ul>
 <li>
-animationstart
+<code>animationstart</code>
 
 <li>
-animationend
+<code>animationend</code>
 
 <li>
-animationiteration
+<code>animationiteration</code>
 
 </ul>
 
@@ -156,79 +158,99 @@ transform 有 2d 和 3d 两种:
 </p>
 <ul>
 <li>
-<code>matrix</code>
+matrix(n, n, n, n, n, n)
 
 <li>
-<code>translate</code> 偏移
+matrix3d(n, n, n, n, n, n, n, n, n, n, n, n, n, n, n, n)
 
 <li>
-<code>translateX</code>
+translate(x, y) 平移
 
 <li>
-<code>translateY</code>
+translate3d(x, y, z)
 
 <li>
-<code>scale</code>  缩放
+translateX(x)
 
 <li>
-<code>scaleX</code>
+translateY(y)
 
 <li>
-<code>scaleY</code>
+translateZ(z)
 
 <li>
-<code>rotate</code> 旋转
+scale(x, y) 缩放
 
 <li>
-<code>skewX</code>
+scale3d(x, y, z)
 
 <li>
-<code>skewY</code>
+scaleX(x)
 
 <li>
-<code>matrix3d</code>
+scaleY(y)
 
 <li>
-<code>translate3d</code>
+scaleZ(z)
 
 <li>
-<code>translateZ</code>
+rotate(angle) 旋转
 
 <li>
-<code>scale3d</code>
+rotate3d(x, y, z, angle)
 
 <li>
-<code>scaleZ</code>
+rotateX(angle)
 
 <li>
-<code>rotate3d</code>
+rotateY(angle)
 
 <li>
-<code>rotateX</code>
+rotateZ(angle)
 
 <li>
-<code>rotateY</code>
+skew(x-angle, y-angle) 拉伸
 
 <li>
-<code>rotateZ</code>
+skewX(angle)
 
 <li>
-<code>perspective</code>
+skewY(angle)
+
+<li>
+perspective(n)
 
 </ul>
 
+
+<h3 id="toc_0.0.5">matrix</h3>
+
+<p>
+<code>transform</code> 属性是对元素进行变形, 变形是通过进行矩阵运算得到的.
+</p>
+
+<p>
+将元素的自身坐标与一个矩阵相乘得到新的坐标.  各种变形效果是通过设置矩阵的值(<a href="http://dev.opera.com/articles/view/understanding-the-css-transforms-matrix/">matrix</a>)不同达到的.
+</p>
+
+<p>
+二维图形变换通过与一个 <a href="http://www.w3.org/TR/css3-transforms/\#two-dimensional-subset ">3维方阵 </a> 相乘得到.
+</p>
+
+<p>
+三维图形变换通过与一个 <a href="http://www.w3.org/TR/css3-transforms/\#mathematical-description ">4维方阵 </a> 相乘得到.
+</p>
 
 
 <h2 id="toc_0.1">TODO</h2>
 <ul>
 <li class="done0">
-transition-timing-function: <code>cubic-bezier</code>
-
-<li class="done0">
 transform <code>matrix</code>
 
-</ul>
+<li class="done0">
+transition-timing-function: <code>cubic-bezier</code>
 
+</ul>
 
 <h3 id="toc_0.1.1">参考 </h3>
 <ul>

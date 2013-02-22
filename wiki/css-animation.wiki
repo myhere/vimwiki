@@ -4,6 +4,7 @@
 
 css 动画相关的属性有 [[https://developer.mozilla.org/en-US/docs/CSS/Tutorials/Using_CSS_transitions|transition]] 和 [[https://developer.mozilla.org/en-US/docs/CSS/Tutorials/Using_CSS_animations|animation]], 一般用这两个属性配合其他属性实现动画效果.
 
+
 === transition ===
 
 [[https://developer.mozilla.org/en-US/docs/CSS/transition|transition]] 是转变, 将指定的 css 属性从一个值转变为另一个值. 
@@ -16,6 +17,7 @@ css 动画相关的属性有 [[https://developer.mozilla.org/en-US/docs/CSS/Tuto
 
 可以监听元素的 `transitioned` 事件来获取 transition 结束状态. 监听方式同 dom
 元素的其他事件一样.
+
 
 === animation ===
 
@@ -32,9 +34,9 @@ css 动画相关的属性有 [[https://developer.mozilla.org/en-US/docs/CSS/Tuto
 * `animation-fill-mode`
 
 animation 的几个事件:
-* animationstart
-* animationend
-* animationiteration
+* `animationstart`
+* `animationend`
+* `animationiteration`
 
 
 === transform 属性 ===
@@ -42,33 +44,43 @@ animation 的几个事件:
 [[https://developer.mozilla.org/en-US/docs/CSS/transform|transform]] 是变形, css3 的一个重要属性, 他常和 transition 和 animation 一起来实现一些动画.
 
 transform 有 2d 和 3d 两种:
-* `matrix`
-* `translate` 偏移
-* `translateX`
-* `translateY`
-* `scale`  缩放
-* `scaleX`
-* `scaleY`
-* `rotate` 旋转
-* `skewX`
-* `skewY`
-* `matrix3d`
-* `translate3d`
-* `translateZ`
-* `scale3d`
-* `scaleZ`
-* `rotate3d`
-* `rotateX`
-* `rotateY`
-* `rotateZ`
-* `perspective`
+* matrix(n, n, n, n, n, n)
+* matrix3d(n, n, n, n, n, n, n, n, n, n, n, n, n, n, n, n)
+* translate(x, y) 平移
+* translate3d(x, y, z)
+* translateX(x)
+* translateY(y)
+* translateZ(z)
+* scale(x, y) 缩放
+* scale3d(x, y, z)
+* scaleX(x)
+* scaleY(y)
+* scaleZ(z)
+* rotate(angle) 旋转
+* rotate3d(x, y, z, angle)
+* rotateX(angle)
+* rotateY(angle)
+* rotateZ(angle)
+* skew(x-angle, y-angle) 拉伸
+* skewX(angle)
+* skewY(angle)
+* perspective(n)
 
+
+=== matrix ===
+
+`transform` 属性是对元素进行变形, 变形是通过进行矩阵运算得到的.
+
+将元素的自身坐标与一个矩阵相乘得到新的坐标.  各种变形效果是通过设置矩阵的值([[http://dev.opera.com/articles/view/understanding-the-css-transforms-matrix/|matrix]])不同达到的.
+
+二维图形变换通过与一个 [[http://www.w3.org/TR/css3-transforms/#two-dimensional-subset | 3维方阵 ]] 相乘得到.
+
+三维图形变换通过与一个 [[http://www.w3.org/TR/css3-transforms/#mathematical-description | 4维方阵 ]] 相乘得到.
 
 
 == TODO ==
-* [ ] transition-timing-function: `cubic-bezier`
 * [ ] transform `matrix`
-
+* [ ] transition-timing-function: `cubic-bezier`
 
 === 参考 ===
 * [[http://www.w3schools.com/cssref/default.asp|css reference]]
