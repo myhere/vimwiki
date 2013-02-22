@@ -44,7 +44,7 @@ animation 的几个事件:
 [[https://developer.mozilla.org/en-US/docs/CSS/transform|transform]] 是变形, css3 的一个重要属性, 他常和 transition 和 animation 一起来实现一些动画.
 
 transform 有 2d 和 3d 两种:
-* matrix(n, n, n, n, n, n)
+* [[http://dev.opera.com/articles/view/understanding-the-css-transforms-matrix/|matrix]](n, n, n, n, n, n)
 * matrix3d(n, n, n, n, n, n, n, n, n, n, n, n, n, n, n, n)
 * translate(x, y) 平移
 * translate3d(x, y, z)
@@ -69,9 +69,7 @@ transform 有 2d 和 3d 两种:
 
 === matrix ===
 
-`transform` 属性是对元素进行变形, 变形是通过进行矩阵运算得到的.
-
-将元素的自身坐标与一个矩阵相乘得到新的坐标.  各种变形效果是通过设置矩阵的值([[http://dev.opera.com/articles/view/understanding-the-css-transforms-matrix/|matrix]])不同达到的.
+matrix 是 `transform` 属性的一个值, 通过对元素坐标进行矩阵运算达到变形效果. 设置 `matrix` 参数达到不同变形效果.
 
 二维图形变换通过与一个 [[http://www.w3.org/TR/css3-transforms/#two-dimensional-subset | 3维方阵 ]] 相乘得到.
 
