@@ -64,8 +64,11 @@ transform 有 2d 和 3d 两种:
 * skew(x-angle, y-angle) 拉伸
 * skewX(angle)
 * skewY(angle)
-* perspective(n)
+* perspective(n) 激活 3d 透视图
 
+==== 相关属性 ====
+* transform-style: preserve-3d|flat
+* backface-visibility: hidden|visible
 
 === matrix ===
 
@@ -81,4 +84,7 @@ matrix 是 `transform` 属性的一个值, 通过对元素坐标进行矩阵运�
 * [ ] transition-timing-function: `cubic-bezier`
 
 === 参考 ===
+* [[http://desandro.github.com/3dtransforms/|3d transform tutorial]]
+* [[http://www.eleqtriq.com/2010/05/understanding-css-3d-transforms/|3d 坐标]]
+* [[https://www.webkit.org/blog/386/3d-transforms/|3d transform]]
 * [[http://www.w3schools.com/cssref/default.asp|css reference]]
