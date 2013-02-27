@@ -17,9 +17,10 @@
   * [[The-Little-Schemer]] -- <<The Little Schemer>> 学习笔记
   * [[modular-css]] -- css 模块化
   * [[css-style-guide]] -- css 风格规范
-  * [[css-animation]] -- css 动画
+  * [[css-animation]] -- css 属性: animation, transition, transform
 
 
 == TODO ==
-* [ ] chrome-dev-tool profile&performance
 * [ ] media query
+* [ ] css3 font
+* [ ] chrome-dev-tool profile&performance

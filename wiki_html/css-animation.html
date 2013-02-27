@@ -85,7 +85,7 @@ css 动画相关的属性有 <a href="https://developer.mozilla.org/en-US/docs/C
 <code>transition-timing-function</code>
 
 <li>
-<code>transition-delay</code>.
+<code>transition-delay</code>
 
 </ul>
 
@@ -98,7 +98,7 @@ css 动画相关的属性有 <a href="https://developer.mozilla.org/en-US/docs/C
 <h3 id="toc_0.0.3">animation</h3>
 
 <p>
-<a href="https://developer.mozilla.org/en-US/docs/CSS/animation">animation</a> 是动画, 配合 <a href="https://developer.mozilla.org/en-US/docs/CSS/@keyframes">keyframe</a> 来指定动画.
+<a href="https://developer.mozilla.org/en-US/docs/CSS/animation">animation</a> 是动画, 配合 <a href="https://developer.mozilla.org/en-US/docs/CSS/@keyframes">keyframe</a> 使用. <code>keyframe</code> 定义一个动画, 包含动画的一些关键帧的 css 属性.
 </p>
 
 <p>
@@ -147,7 +147,62 @@ animation 的几个事件:
 </ul>
 
 
-<h3 id="toc_0.0.4">transform 属性 </h3>
+<h3 id="toc_0.0.4">timing-function</h3>
+
+<ul>
+<li>
+<code>transition-timing-function</code>
+
+<li>
+<code>animation-timing-function</code>
+
+</ul>
+
+<p>
+<a href="http://www.w3.org/TR/2013/WD-css3-transitions-20130212/\#transition-timing-function-property">transition-timing-function</a> 和 <a href="http://www.w3.org/TR/2013/WD-css3-animations-20130219/\#animation-timing-function-property">animation-timing-function</a> 有两种类型的值:
+</p>
+<ul>
+<li>
+三次方贝塞尔曲线(<a href="http://cubic-bezier.com/">cubic-bezier</a>)函数.
+
+<ul>
+<li>
+liner
+
+<li>
+ease
+
+<li>
+ease-in
+
+<li>
+ease-out
+
+<li>
+ease-in-out
+
+<li>
+cubic-bezier(n, n, n, n)
+
+</ul>
+<li>
+step 函数
+
+<ul>
+<li>
+step-start
+
+<li>
+step-end
+
+<li>
+steps(n, [, [start|end]]?)
+
+</ul>
+</ul>
+
+
+<h3 id="toc_0.0.5">transform 属性 </h3>
 
 <p>
 <a href="https://developer.mozilla.org/en-US/docs/CSS/transform">transform</a> 是变形, css3 的一个重要属性, 他常和 transition 和 animation 一起来实现一些动画.
@@ -222,7 +277,7 @@ perspective(n) 激活 3d 透视图
 
 </ul>
 
-<h4 id="toc_0.0.4.1">相关属性 </h4>
+<h4 id="toc_0.0.5.1">相关属性 </h4>
 <ul>
 <li>
 transform-style: preserve-3d|flat
@@ -232,33 +287,30 @@ backface-visibility: hidden|visible
 
 </ul>
 
-<h3 id="toc_0.0.5">matrix</h3>
+<h4 id="toc_0.0.5.2">matrix</h4>
 
 <p>
-matrix 是 <code>transform</code> 属性的一个值, 通过对元素坐标进行矩阵运算达到变形效果. 设置 <code>matrix</code> 参数达到不同变形效果.
+<code>matrix</code> 是 <code>transform</code> 属性的一个值, 通过对元素坐标进行矩阵运算达到变形效果. 设置 <code>matrix</code> 参数达到不同变形效果.
 </p>
 
 <p>
-二维图形变换通过与一个 <a href="http://www.w3.org/TR/css3-transforms/\#two-dimensional-subset ">3维方阵 </a> 相乘得到.
+<code>transform</code> 的几个值 <code>translate</code>, <code>scale</code>, <code>rotate</code>, <code>skew</code> 都是 <code>matrix</code>的快捷方式.
 </p>
 
 <p>
-三维图形变换通过与一个 <a href="http://www.w3.org/TR/css3-transforms/\#mathematical-description ">4维方阵 </a> 相乘得到.
+二维图形变换通过与一个 <a href="http://www.w3.org/TR/css3-transforms/\#two-dimensional-subset ">3维方阵 </a> 相乘得到. 实际需要 6 个值, 所以 <code>matrix()</code> 需要 6 个参数.
+</p>
+
+<p>
+三维图形变换通过与一个 <a href="http://www.w3.org/TR/css3-transforms/\#mathematical-description ">4维方阵 </a> 相乘得到. <code>matrix3d()</code> 需要 16 个参数.
 </p>
 
 
-<h2 id="toc_0.1">TODO</h2>
+<h3 id="toc_0.0.6">参考 </h3>
 <ul>
-<li class="done0">
-transform <code>matrix</code>
+<li>
+<a href="http://zh.wikipedia.org/wiki/%E8%B2%9D%E8%8C%B2%E6%9B%B2%E7%B7%9A">bezier-curve</a>
 
-<li class="done0">
-transition-timing-function: <code>cubic-bezier</code>
-
-</ul>
-
-<h3 id="toc_0.1.1">参考 </h3>
-<ul>
 <li>
 <a href="http://desandro.github.com/3dtransforms/">3d transform tutorial</a>
 
