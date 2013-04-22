@@ -1,0 +1,37 @@
+%title 移动设备事件类型 
+
+== clickable element ==
+* link
+* form element
+* image map area
+* any other element with mousemove mousedown mouseup, or click handlers
+
+== scrollable element ==
+* any element with appropriate overflow style, text areas, and scrollable iframe elements
+
+== form & document event ==
+* blur, focus, load, unload, reset, submit, change, abort
+
+
+== ios 上事件 ==
+* One-Finger Events
+  * scroll
+* Two-Finger Events
+  * mousewheel
+* Multi-Touch Events
+  * touchstart
+  * touchmove
+  * touchend
+  * touchcancel
+* Gesture Events
+  * gesturestart
+  * gesturechange
+  * gestureend
+* Orientation Events
+  * orientationchange
+
+
+
+== 参考 ==
+* http://developer.apple.com/library/safari/#documentation/appleapplications/reference/safariwebcontent/handlingevents/handlingevents.html
+

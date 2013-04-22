@@ -1,0 +1,18 @@
+%title mobile 学习计划 
+
+= TODO =
+* [ ] mobile event
+* [ ] jQMobi & zepto 对比
+* [ ] 布局确定
+* [ ] 开发环境
+  * [ ] 脚本加载 seajs?
+  * [ ] css reset?
+  * [ ] 打包 grunt?
+* [ ] 如何调试
+
+
+= 分好优先级 =
+* 性能优化最后做
+* 前期不要太拘泥于细节，先出 demo
+
+= 多跟人交流 =

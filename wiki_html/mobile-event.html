@@ -2,7 +2,7 @@
 <html lang="zh-CN">
   <head>
     <meta charset="utf-8">
-    <title>Myhere's vimwiki</title>
+    <title>移动设备事件类型 </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="学习笔记">
     <meta name="author" content="myhere.2009@gmail.com">
@@ -58,78 +58,102 @@ if (r.test(l)) {
       <div class="content" id="content">
 
 
-<h2 id="toc_0.1">文章列表</h2>
+<h2 id="toc_0.1">clickable element</h2>
 <ul>
 <li>
-<a href="SearchAndReplace.html">SearchAndReplace</a> -- Vim
+link
 
 <li>
-<a href="LeftAndRightMotions.html">LeftAndRightMotions</a> -- Vim
+form element
 
 <li>
-<a href="CommandlineMode.html">CommandlineMode</a> -- Vim
+image map area
 
 <li>
-<a href="JasMineNotes.html">JasMineNotes</a> -- Notes about Jasmine
+any other element with mousemove mousedown mouseup, or click handlers
 
-<li>
-<a href="PHPDotDirectory.html">PHPDotDirectory</a> -- php 中 . 的路径
+</ul>
 
+<h2 id="toc_0.2">scrollable element</h2>
+<ul>
 <li>
-<a href="GitNotesBasic.html">GitNotesBasic</a> -- git 基础知识
+any element with appropriate overflow style, text areas, and scrollable iframe elements
 
-<li>
-<a href="GitNotesBranch.html">GitNotesBranch</a> -- git 分支
+</ul>
 
+<h2 id="toc_0.3">form &amp; document event</h2>
+<ul>
 <li>
-<a href="GitWorkWithBranch.html">GitWorkWithBranch</a> -- git 分支工作流
-
-<li>
-<a href="GitTools.html">GitTools</a> -- git 工具
-
-<li>
-<a href="xpath.html">xpath</a> -- xml path language
-
-<li>
-<a href="emacs-tutorial.html">emacs-tutorial</a> --  emacs tutorial 笔记
-
-<li>
-<a href="personal-project.html">personal-project</a>  -- 项目笔记
-
-<li>
-<a href="git-share.html">git-share</a> -- git 分享
-
-<li>
-<a href="The-Little-Schemer.html">The-Little-Schemer</a> -- &lt;&lt;The Little Schemer&gt;&gt; 学习笔记
-
-<li>
-<a href="modular-css.html">modular-css</a> -- css 模块化
-
-<li>
-<a href="css-style-guide.html">css-style-guide</a> -- css 风格规范
-
-<li>
-<a href="css-animation.html">css-animation</a> -- css 属性: animation, transition, transform
-
-<li>
-<a href="mobile.html">mobile</a> -- 移动学习计划
-
-<li>
-<a href="mobile-event.html">mobile-event</a> -- 移动设备事件类型
+blur, focus, load, unload, reset, submit, change, abort
 
 </ul>
 
 
-<h2 id="toc_0.2">TODO</h2>
+<h2 id="toc_0.4">ios 上事件 </h2>
 <ul>
-<li class="done0">
-media query
+<li>
+One-Finger Events
 
-<li class="done0">
-css3 font
+<ul>
+<li>
+scroll
 
-<li class="done0">
-chrome-dev-tool profile&amp;performance
+</ul>
+<li>
+Two-Finger Events
+
+<ul>
+<li>
+mousewheel
+
+</ul>
+<li>
+Multi-Touch Events
+
+<ul>
+<li>
+touchstart
+
+<li>
+touchmove
+
+<li>
+touchend
+
+<li>
+touchcancel
+
+</ul>
+<li>
+Gesture Events
+
+<ul>
+<li>
+gesturestart
+
+<li>
+gesturechange
+
+<li>
+gestureend
+
+</ul>
+<li>
+Orientation Events
+
+<ul>
+<li>
+orientationchange
+
+</ul>
+</ul>
+
+
+
+<h2 id="toc_0.5">参考 </h2>
+<ul>
+<li>
+<a href="http://developer.apple.com/library/safari/#documentation/appleapplications/reference/safariwebcontent/handlingevents/handlingevents.html">http://developer.apple.com/library/safari/#documentation/appleapplications/reference/safariwebcontent/handlingevents/handlingevents.html</a>
 
 </ul>
 
