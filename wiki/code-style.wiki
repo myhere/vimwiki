@@ -1,0 +1,37 @@
+%title 自己的代码风格 
+
+=== 统一代码风格的好处 ===
+* 项目换人维护时容易上手
+
+=== 通用 ===
+* 缩进用 2 个空格
+
+
+=== html ===
+* 所有代码只用小写字母
+* 标签属性按字母顺序排列
+* 使用 html dtd
+* 省略 style, script 的 type 属性
+* 行尾不要留空格
+
+
+=== css ===
+* ID, class 命名尽量通用且有意义
+* 尽量不要用 ID 选择器
+* ID, class 名称多单词用 - 分割
+* css 属性顺序保持一致
+* 使用[[https://developers.google.com/speed/docs/best-practices/rendering#UseEfficientCSSSelectors|高效选择器 ]]
+  * 不要使用 * 选择器
+  * 不要使用标签选择器
+  * 避免在在 ie7/8 下给非链接元素使用 :hover 选择器
+* 项目中模块使用统一的命名前缀
+
+
+=== javascript ===
+* 变量使用驼峰形式 camelCase
+
+
+
+=== 参考 ===
+* [[http://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml|google html/css style guide]]
+* 
