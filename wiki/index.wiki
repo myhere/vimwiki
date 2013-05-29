@@ -21,9 +21,20 @@
   * [[css-webfont]] -- @font-face
   * [[code-style]] -- 代码风格
   * [[learncsslayout.com-note]] -- 笔记
+  * [[mobile]] -- 移动学习计划
+  * [[mobile-event]] -- 移动设备事件类型
 
 
 == TODO ==
 * [ ] media query
 * [ ] css3 font
 * [ ] chrome-dev-tool profile&performance
+
+
+== work todo ==
+* list 异步接口时间
+* 总结写到 wiki
+* seajs 文件组织学些 -> list mobile
+* datalazyload
+* tbc
+* 梳理 list 模块对应关系, vm, css, js 输出问题
