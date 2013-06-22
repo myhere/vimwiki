@@ -32,9 +32,10 @@
 
 
 == work todo ==
-* list 异步接口时间
 * 总结写到 wiki
 * seajs 文件组织学些 -> list mobile
-* datalazyload
-* tbc
 * 梳理 list 模块对应关系, vm, css, js 输出问题
+* list 开发同学培训 - list 前端开发环境
+  * 模块组织
+  * 编译&打包(皮肤)
+  * 调试
