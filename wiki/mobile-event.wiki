@@ -33,16 +33,17 @@
 
 === deviceorientation ===
 
-deviceorientation 是确定设备朝向的事件, 事件发生在 window 对象上. 事件对象上有 4 个属性:
-`alpha`, `beta`, `gamma`, `absolute`, 前 3 个表示 [[https://developer.mozilla.org/en-US/docs/Web/Guide/DOM/Events/Orientation_and_motion_data_explained?redirectlocale=en-US&redirectslug=DOM%2FOrientation_and_motion_data_explained#Device_coordinate_frame|设备坐标]] 相对于 [[https://developer.mozilla.org/en-US/docs/Web/Guide/DOM/Events/Orientation_and_motion_data_explained?redirectlocale=en-US&redirectslug=DOM%2FOrientation_and_motion_data_explained#Earth_coordinate_frame|基准坐标]] 的角度. 这个角度的计算方式是 [[https://zh.wikipedia.org/wiki/%E6%AC%A7%E6%8B%89%E8%A7%92 |欧拉角]] 
+deviceorientation 是确定设备 [[http://zh.wikipedia.org/wiki/%E5%AE%9A%E5%90%91_(%E5%B9%BE%E4%BD%95)|定向]] 的事件, 事件发生在 window 对象上. 事件对象上有 4 个属性:
+`alpha`, `beta`, `gamma`, `absolute`, 前 3 个表示 [[https://developer.mozilla.org/en-US/docs/Web/Guide/DOM/Events/Orientation_and_motion_data_explained?redirectlocale=en-US&redirectslug=DOM%2FOrientation_and_motion_data_explained#Device_coordinate_frame|设备坐标]] 相对于 [[https://developer.mozilla.org/en-US/docs/Web/Guide/DOM/Events/Orientation_and_motion_data_explained?redirectlocale=en-US&redirectslug=DOM%2FOrientation_and_motion_data_explained#Earth_coordinate_frame|基准坐标]] 的角度. 这个角度的 [[http://dev.w3.org/geo/api/spec-source-orientation.html#deviceorientation|计算方式]] 是 [[http://en.wikipedia.org/wiki/Tait-Bryan_angles#Tait.E2.80.93Bryan_angles|Tait–Bryan angles(欧拉角的一种)]].  如果设备不能提供 3 个角度的绝对值(相对于基准坐标), 可以提供相对于一些其他取向的坐标, 这时候会设置 `absolute` 为 `false`, 否则为 `true`
 
 Firefox 下的事件名和标准不一样, 是 `MozOrientation`, 事件对象也不同.  
 
 ==== 参考 ====
 * [[http://www.html5rocks.com/en/tutorials/device/orientation/|html5rock]]
 * [[https://developer.mozilla.org/en-US/docs/Web/Guide/DOM/Events/Orientation_and_motion_data_explained?redirectlocale=en-US&redirectslug=DOM%2FOrientation_and_motion_data_explained#Earth_coordinate_frame|mdn]]
+* [[http://dev.opera.com/articles/view/w3c-device-orientation-api/|opera api]]
 * [[http://dev.w3.org/geo/api/spec-source-orientation.html|w3c]]
-* [[https://zh.wikipedia.org/wiki/%E6%AC%A7%E6%8B%89%E8%A7%92 |欧拉角]]
+* [[http://en.wikipedia.org/wiki/Tait-Bryan_angles#Tait.E2.80.93Bryan_angles|Tait–Bryan angles]]
 
 
 
