@@ -1,0 +1,66 @@
+# 什么是对前端友好的 http 接口
+
+搞前端的都少不了跟服务器数据交互, 跟服务器数据传输主要是调 http 接口. 在平时做项目、活动中也接触过各种各样接口, 接口一般是开发同学根据自己需要写, 接触了各种接口后我觉得有必要说下我认为的对前端友好的 http 接口. 在淘宝接口一般都是 java 同学写的, 这个也主要是写个 java 同学看的, 但是还是想先发到前端群里大家讨论下, 看看什么才是对前端友好的 http 接口.  :)
+
+
+## 请求参数格式统一
+
+目前 http 接口参数格式不统一, 有 camelCase 形式的, 也有 camel_case 的, 甚至还有同一个接口两种形式都有的, 虽然用起来没什么区别, 但是看起来有中蛋蛋的忧伤；
+webx 有个参数是用来说明参数编码的 _input_charset=utf8 , 我觉得可以跟 webx 一致, 格式统一用 camel_case 形式；
+如果两个词连起来很容易区分直接 camelcase 形式, 比如 itemid=121343
+
+## 请求参数名称统一, 参数最好见名知意
+
+比如 jsonp 接口回调统一叫 callback, 目前见过叫 cb 的, 也有叫 jsonp 的, 这么随心所欲的写, 让用的人情何以堪啊?
+下面几个是我想到的常见参数的命名:
+
+* callback:  jsonp 回调名
+* count: 数量
+* page_size: 每页个数
+* page_no:  页码
+* offset: 分页偏移量
+* q: 查询词
+* itemid: 宝贝 id
+* shopid: 店铺 id
+* cat: 类目id
+
+
+## JSON 使用正确的数据类型
+
+json 是 javascript 的子集, 也是有数据类型的, java 里数据类型应该可以方面的 serialize 为字符串.
+json 中的数据类型有: Object, Array, String, Number, Boolean, Null. 具体见 json 文档: http://json.org/.
+但是有些 json 的数据类型用的不规范, 比如 {isSelected: '1'}, 其实这个 '1' 是一个人造常量,
+用 true | false 更合适, 如果觉得 true|false 会增加响应内容长度, 用 0|1 也比 '0'|'1' 好.
+
+## JSON 中 key 参数统一
+
+这个其实和请求参数一样, 最好能有一致的格式, 这里我觉得 用 camelCase 的方式好些, 比如:
+title, itemId, itemLink, itemPic, itemPrice, actPrice, shopId
+
+
+## json 与 jsonp 支持
+
+区别: json 格式在前端跨域是不能调用的(ajax 浏览器限制), XMLHttpRequest2 可以跨域调用, 但需要服务器设置,
+如果 json 格式请添加 cros 头部, 具体见: http://docs.kissyui.com/1.4/docs/html/api/io/index.html
+
+假设 jsonp 统一参数名为 callback, 如果不传 callback 参数或 callback 参数为空, 返回 json 格式.
+
+
+## 接口不要与业务结合态紧密
+
+既然做成 http 接口了, 我觉得可以适当考虑灵活性, 不要太与业务关联. 比如: 接口中 image 字段不要限定为业务中的大小(添加后缀),
+现在都在搞移动端, 接口化后前端可以直接用接口搞移动端适配, image 字段限定大小了适应起来移动端不是麻烦了么?
+
+
+## 用 java 序列化为 json 字符串
+
+很多 java 同学用 vm 拼接 json 接口, 这写起来不方便不说, 而且容易出错, Array 少个逗号 ie 报错很多人应该遇到过.
+
+
+
+## 一些工具
+* 格式化 http 接口, chrome-extension: jsonview, https://chrome.google.com/webstore/detail/chklaanhfefbnpoihckbnefhakgolnmc
+
+
+
+/* vim: set ft=markdown:*/

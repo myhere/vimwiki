@@ -23,12 +23,14 @@
   * [[learncsslayout.com-note]] -- 笔记
   * [[mobile]] -- 移动学习计划
   * [[mobile-event]] -- 移动设备事件类型
+  * [[http-interface]] -- http 接口
 
 
 == TODO ==
 * [ ] media query
 * [ ] css3 font
 * [ ] chrome-dev-tool profile&performance
+* [ ] [[1212]]
 
 
 == work todo ==
@@ -39,3 +41,45 @@
   * 模块组织
   * 编译&打包(皮肤)
   * 调试
+* datalazyload 延迟加载问题
+
+* list 多终端
+  * importStyle css 依赖
+  * 性能&体验
+  * 个性化 - 不同类目
+  * pad 版 & phone 版
+
+
+* 2013-1212 总结
+  * 协作
+    * 横向(前端间)&纵向(视觉, 前端, 运营, 开发)
+  * 便利性
+  * dpl
+  * 特点
+
+* 问题
+  * 性能排查 - chrome developer tool
+  * scroll 平滑滚动触发时间
+  * css3 动画
+
+* list mobile 开发心得
+  * 与 pc 不同
+    * 开发过程
+  * 做了哪些
+    * retina
+    * 分辨率适配
+      * 布局
+      * flexbox
+  * 遇到问题
+    * 缓存更新
+    * 性能
+      * 缓存元素 & id-selector
+      * css3
+      * 动画
+      * fallback
+    * 兼容问题: mobile browser & webview
+      * UA 特殊处理
+    * Guesture.tap
+      * click through
+  * 组件
+    * iscroll
