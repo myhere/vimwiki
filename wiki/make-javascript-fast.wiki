@@ -1,0 +1,13 @@
+= make javascript fast =
+
+== dom ==
+
+* 减少 dom 操作
+  * 缓存 dom 查找; 多次使用的 dom 元素缓存为 变量
+* 使用高效 dom 选择器
+  * `#idSelector`
+
+== ecma ==
+
+== bom ==
+

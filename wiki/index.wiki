@@ -13,7 +13,6 @@
   * [[xpath]] -- xml path language
   * [[emacs-tutorial]] --  emacs tutorial 笔记
   * [[personal-project]]  -- 项目笔记
-  * [[git-share]] -- git 分享
   * [[The-Little-Schemer]] -- <<The Little Schemer>> 学习笔记
   * [[modular-css]] -- css 模块化
   * [[css-style-guide]] -- css 风格规范
@@ -24,8 +23,13 @@
   * [[mobile]] -- 移动学习计划
   * [[mobile-event]] -- 移动设备事件类型
   * [[http-interface]] -- http 接口
+  * [[make-javascript-fast]]
 
 
 == TODO ==
 
-
+* web components
+* 切面编程
+* angular
+  * 依赖注入
+  * 双向绑定
